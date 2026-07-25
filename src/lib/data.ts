@@ -42,6 +42,9 @@ export const person = {
   location: "Available worldwide · Open to opportunities",
   email: "solniguss14@gmail.com",
   resumeUrl: "/resume.pdf",
+  // Portrait shown in the hero frame. Drop the file at public/portrait.jpg
+  // (or change this path). Set to null to fall back to the monogram frame.
+  photo: "/portrait.jpg" as string | null,
   socials: {
     github: "https://github.com/niguss",
     linkedin: "https://www.linkedin.com/in/niguss-solomon",

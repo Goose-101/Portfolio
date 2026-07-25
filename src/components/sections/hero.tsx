@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Mail, MapPin, Sparkles } from "lucide-react";
 import { AnimatedBackground } from "@/components/animated-background";
@@ -182,16 +183,34 @@ function Portrait() {
 
       <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] glass p-[1.5px]">
         <div className="relative h-full w-full overflow-hidden rounded-[calc(2rem-1.5px)] bg-gradient-to-br from-[hsl(222,44%,10%)] to-[hsl(224,47%,5%)]">
-          {/* Decorative gradient wash */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--accent)/0.25),transparent_55%),radial-gradient(circle_at_80%_80%,hsl(var(--cyan)/0.2),transparent_55%)]" />
-          <div className="absolute inset-0 grid-lines opacity-40" />
+          {person.photo ? (
+            <>
+              {/* Portrait photo */}
+              <Image
+                src={person.photo}
+                alt={`Portrait of ${person.name}`}
+                fill
+                priority
+                sizes="(max-width: 1024px) 24rem, 28rem"
+                className="object-cover object-top"
+              />
+              {/* Readability gradient behind the name plate */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />
+            </>
+          ) : (
+            <>
+              {/* Decorative gradient wash */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--accent)/0.25),transparent_55%),radial-gradient(circle_at_80%_80%,hsl(var(--cyan)/0.2),transparent_55%)]" />
+              <div className="absolute inset-0 grid-lines opacity-40" />
 
-          {/* Initials monogram */}
-          <div className="absolute inset-0 grid place-items-center">
-            <span className="font-display text-[7rem] font-bold text-white/[0.06] select-none">
-              {initials}
-            </span>
-          </div>
+              {/* Initials monogram */}
+              <div className="absolute inset-0 grid place-items-center">
+                <span className="font-display text-[7rem] font-bold text-white/[0.06] select-none">
+                  {initials}
+                </span>
+              </div>
+            </>
+          )}
 
           {/* Floating accent chip */}
           <motion.div
