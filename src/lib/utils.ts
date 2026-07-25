@@ -9,4 +9,4 @@ export function cn(...inputs: ClassValue[]) {
 /** Absolute site URL, used for SEO + canonical links. */
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
-  "https://niguss.dev";
+  "https://nigussgebru.com";

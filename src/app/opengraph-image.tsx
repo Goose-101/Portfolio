@@ -41,7 +41,7 @@ export default function OpengraphImage() {
             {"</>"}
           </div>
           <div style={{ fontSize: 26, color: "#94a3b8" }}>
-            {person.firstName}.dev
+            {person.wordmark}
           </div>
         </div>
 

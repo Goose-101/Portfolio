@@ -77,7 +77,7 @@ export function Navbar() {
             <span className="grid h-8 w-8 place-items-center rounded-lg bg-accent/15 text-accent ring-1 ring-accent/30 transition-colors group-hover:bg-accent/25">
               <Terminal className="h-4 w-4" />
             </span>
-            <span className="hidden sm:inline">{person.firstName}.dev</span>
+            <span className="hidden sm:inline">{person.wordmark}</span>
           </button>
 
           {/* Desktop links */}

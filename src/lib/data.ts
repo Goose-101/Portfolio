@@ -27,8 +27,10 @@ import {
 /*  Identity                                                          */
 /* ----------------------------------------------------------------- */
 export const person = {
-  name: "Niguss Solomon Gebru",
+  name: "Niguss Gebru",
   firstName: "Niguss",
+  // Wordmark shown in the navbar/footer logo and used as the domain.
+  wordmark: "nigussgebru.com",
   roles: [
     "Software Engineer",
     "AI Researcher",

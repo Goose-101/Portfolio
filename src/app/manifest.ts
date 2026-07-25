@@ -4,7 +4,7 @@ import { person } from "@/lib/data";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: `${person.name} — Portfolio`,
-    short_name: `${person.firstName}.dev`,
+    short_name: person.wordmark,
     description:
       "Software Engineer, AI Researcher, Full Stack Developer & Founder.",
     start_url: "/",

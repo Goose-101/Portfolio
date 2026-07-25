@@ -69,10 +69,10 @@ export function Hero() {
             transition={{ duration: 0.7, ease, delay: 0.05 }}
             className="font-display text-[clamp(2.6rem,7vw,5rem)] font-bold leading-[0.98] tracking-tight"
           >
-            {person.name.split(" ").slice(0, 2).join(" ")}
+            {person.name.split(" ")[0]}
             <br />
             <span className="text-gradient">
-              {person.name.split(" ").slice(2).join(" ")}
+              {person.name.split(" ").slice(1).join(" ")}
             </span>
           </motion.h1>
 

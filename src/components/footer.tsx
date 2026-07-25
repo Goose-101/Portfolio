@@ -25,7 +25,7 @@ export function Footer() {
             <span className="grid h-9 w-9 place-items-center rounded-lg bg-accent/15 text-accent ring-1 ring-accent/30">
               <Terminal className="h-4 w-4" />
             </span>
-            {person.firstName}.dev
+            {person.wordmark}
           </button>
 
           <p className="max-w-md text-sm text-muted-foreground">
