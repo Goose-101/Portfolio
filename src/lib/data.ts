@@ -42,14 +42,14 @@ export const person = {
   tagline:
     "I build intelligent, secure, and human-centered software — from full-stack products to applied AI research.",
   location: "Available worldwide · Open to opportunities",
-  email: "solniguss14@gmail.com",
+  email: "ngebru5@student.gsu.edu",
   resumeUrl: "/resume.pdf",
   // Portrait shown in the hero frame. Drop the file at public/portrait.jpg
   // (or change this path). Set to null to fall back to the monogram frame.
   photo: "/portrait.jpg" as string | null,
   socials: {
-    github: "https://github.com/niguss",
-    linkedin: "https://www.linkedin.com/in/niguss-solomon",
+    github: "https://github.com/Goose-101",
+    linkedin: "https://www.linkedin.com/in/niguss-gebru-a81b1b26a",
   },
 };
 
@@ -63,7 +63,6 @@ export const navLinks = [
   { id: "projects", label: "Projects" },
   { id: "research", label: "Research" },
   { id: "skills", label: "Skills" },
-  { id: "achievements", label: "Achievements" },
   { id: "contact", label: "Contact" },
 ] as const;
 
@@ -323,11 +322,6 @@ export const skillCategories: SkillCategory[] = [
     skills: ["Git", "CI/CD", "GitHub Actions", "Linux", "Nginx"],
   },
   {
-    title: "Cybersecurity",
-    icon: ShieldCheck,
-    skills: ["Web Security", "Auth & OAuth", "Threat Modeling", "OWASP"],
-  },
-  {
     title: "AI / ML",
     icon: Brain,
     skills: ["PyTorch", "scikit-learn", "Pandas", "NumPy", "LLMs"],
@@ -393,13 +387,13 @@ export const contactChannels = [
   },
   {
     label: "GitHub",
-    value: "@niguss",
+    value: "Goose-101",
     href: person.socials.github,
     icon: Github,
   },
   {
     label: "LinkedIn",
-    value: "Niguss Solomon",
+    value: "Niguss Gebru",
     href: person.socials.linkedin,
     icon: Linkedin,
   },
