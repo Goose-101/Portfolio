@@ -23,8 +23,8 @@ export function Research() {
       <div className="container-px">
         <SectionHeading
           eyebrow="Research"
-          title="Advancing adaptive & applied AI."
-          description="I work at the intersection of machine learning, adaptive systems, and human-centered applications — publishing, presenting, and prototyping along the way."
+          title="Exploring quantum, data & security."
+          description="Beyond coursework, I dig into quantum computing, data management, and cybersecurity through research programs, projects, and certified study."
         />
 
         <StaggerGroup className="mt-16 space-y-4">

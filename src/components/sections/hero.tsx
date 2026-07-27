@@ -228,7 +228,7 @@ function Portrait() {
               {person.name}
             </div>
             <div className="text-xs text-muted-foreground">
-              Software Engineer · AI Researcher
+              Software Engineer · CS Student
             </div>
           </div>
         </div>

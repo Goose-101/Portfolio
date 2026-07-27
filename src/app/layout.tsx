@@ -24,23 +24,23 @@ const mono = JetBrains_Mono({
 });
 
 const description =
-  "Niguss Solomon Gebru — Software Engineer, AI Researcher, Full Stack Developer, Founder, and Cybersecurity enthusiast building intelligent, secure, human-centered software.";
+  "Niguss Gebru — Software Engineer, Full-Stack Developer, and Computer Science student at Georgia State University with a passion for cybersecurity and data analytics, building impactful, human-centered software.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${person.name} — Software Engineer & AI Researcher`,
+    default: `${person.name} — Software Engineer & CS Student`,
     template: `%s — ${person.name}`,
   },
   description,
   keywords: [
-    "Niguss Solomon Gebru",
+    "Niguss Gebru",
     "Software Engineer",
-    "AI Researcher",
     "Full Stack Developer",
-    "Founder",
+    "Computer Science",
+    "Georgia State University",
     "Cybersecurity",
-    "Machine Learning",
+    "Data Analytics",
     "Next.js",
     "Portfolio",
   ],
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE_URL,
-    title: `${person.name} — Software Engineer & AI Researcher`,
+    title: `${person.name} — Software Engineer & CS Student`,
     description,
     siteName: `${person.name} · Portfolio`,
     images: [
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${person.name} — Software Engineer & AI Researcher`,
+    title: `${person.name} — Software Engineer & CS Student`,
     description,
     images: ["/opengraph-image"],
   },
@@ -94,14 +94,15 @@ export default function RootLayout({
     name: person.name,
     url: SITE_URL,
     email: `mailto:${person.email}`,
-    jobTitle: "Software Engineer & AI Researcher",
+    jobTitle: "Software Engineer & Computer Science Student",
+    alumniOf: "Georgia State University",
     sameAs: [person.socials.github, person.socials.linkedin],
     knowsAbout: [
       "Software Engineering",
-      "Artificial Intelligence",
-      "Machine Learning",
       "Full Stack Development",
       "Cybersecurity",
+      "Data Analytics",
+      "Web Development",
     ],
   };
 
