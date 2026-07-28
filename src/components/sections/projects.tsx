@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight, ExternalLink, FileText, Github } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
@@ -38,34 +39,76 @@ export function Projects() {
 
 function ProjectCard({ project }: { project: Project }) {
   const Icon = project.icon;
+  // The card's primary destination when clicked (skip "#" placeholders).
+  const primary =
+    project.links.demo || project.links.caseStudy || project.links.github;
+  const primaryHref = primary && primary !== "#" ? primary : undefined;
+  const external = primaryHref?.startsWith("http");
+
   return (
     <motion.article
       whileHover={{ y: -6 }}
       transition={{ type: "spring", stiffness: 300, damping: 22 }}
       className="group flex h-full flex-col overflow-hidden rounded-2xl glass glass-hover"
     >
-      {/* Generated cover art */}
+      {/* Cover art */}
       <div
         className={cn(
           "relative aspect-[16/9] overflow-hidden bg-gradient-to-br",
           project.gradient
         )}
       >
-        <div className="absolute inset-0 grid-lines opacity-30 mix-blend-overlay" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-        <div className="absolute inset-0 grid place-items-center">
-          <Icon className="h-14 w-14 text-white/90 drop-shadow-lg transition-transform duration-500 group-hover:scale-110" />
-        </div>
-        <span className="absolute left-4 top-4 rounded-full bg-black/30 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+        {project.image ? (
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            sizes="(max-width: 768px) 100vw, 640px"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <>
+            <div className="absolute inset-0 grid-lines opacity-30 mix-blend-overlay" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+            <div className="absolute inset-0 grid place-items-center">
+              <Icon className="h-14 w-14 text-white/90 drop-shadow-lg transition-transform duration-500 group-hover:scale-110" />
+            </div>
+          </>
+        )}
+        <span className="absolute left-4 top-4 z-20 rounded-full bg-black/40 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
           {project.category}
         </span>
+        {/* Full-cover click target → primary link */}
+        {primaryHref && (
+          <a
+            href={primaryHref}
+            target={external ? "_blank" : undefined}
+            rel="noopener noreferrer"
+            aria-label={`Open ${project.title}`}
+            className="absolute inset-0 z-10"
+          />
+        )}
       </div>
 
       {/* Body */}
       <div className="flex flex-1 flex-col p-6">
-        <h3 className="flex items-center gap-1.5 font-display text-lg font-semibold">
-          {project.title}
-          <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent" />
+        <h3 className="font-display text-lg font-semibold">
+          {primaryHref ? (
+            <a
+              href={primaryHref}
+              target={external ? "_blank" : undefined}
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 transition-colors hover:text-accent"
+            >
+              {project.title}
+              <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent" />
+            </a>
+          ) : (
+            <span className="flex items-center gap-1.5">
+              {project.title}
+              <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent" />
+            </span>
+          )}
         </h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
           {project.description}

@@ -24,12 +24,12 @@ const mono = JetBrains_Mono({
 });
 
 const description =
-  "Niguss Gebru — Software Engineer, Full-Stack Developer, and Computer Science student at Georgia State University with a passion for cybersecurity and data analytics, building impactful, human-centered software.";
+  "Niguss Gebru — Software Engineer, Full-Stack Developer, founder of Fresh Land, and undergraduate researcher at Georgia State University building production platforms, applied research, and AI-powered tools.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${person.name} — Software Engineer & CS Student`,
+    default: `${person.name} — Software Engineer & Founder`,
     template: `%s — ${person.name}`,
   },
   description,
@@ -37,10 +37,11 @@ export const metadata: Metadata = {
     "Niguss Gebru",
     "Software Engineer",
     "Full Stack Developer",
-    "Computer Science",
+    "Founder",
+    "Fresh Land",
+    "Undergraduate Researcher",
     "Georgia State University",
-    "Cybersecurity",
-    "Data Analytics",
+    "Computer Science",
     "Next.js",
     "Portfolio",
   ],
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE_URL,
-    title: `${person.name} — Software Engineer & CS Student`,
+    title: `${person.name} — Software Engineer & Founder`,
     description,
     siteName: `${person.name} · Portfolio`,
     images: [
@@ -64,7 +65,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${person.name} — Software Engineer & CS Student`,
+    title: `${person.name} — Software Engineer & Founder`,
     description,
     images: ["/opengraph-image"],
   },
@@ -94,14 +95,14 @@ export default function RootLayout({
     name: person.name,
     url: SITE_URL,
     email: `mailto:${person.email}`,
-    jobTitle: "Software Engineer & Computer Science Student",
-    alumniOf: "Georgia State University",
+    jobTitle: "Software Engineer, Founder & Undergraduate Researcher",
+    alumniOf: "Georgia State University Perimeter College",
     sameAs: [person.socials.github, person.socials.linkedin],
     knowsAbout: [
       "Software Engineering",
       "Full Stack Development",
-      "Cybersecurity",
-      "Data Analytics",
+      "Artificial Intelligence",
+      "Adaptive Learning Systems",
       "Web Development",
     ],
   };

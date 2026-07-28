@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Mail, MapPin, Sparkles } from "lucide-react";
+import { ArrowUpRight, Mail, Sparkles } from "lucide-react";
 import { AnimatedBackground } from "@/components/animated-background";
 import { Button } from "@/components/ui/button";
 import { heroStats, person } from "@/lib/data";
@@ -116,15 +116,6 @@ export function Hero() {
             </Button>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-6 flex items-center gap-2 text-sm text-muted-foreground"
-          >
-            <MapPin className="h-4 w-4" />
-            {person.location}
-          </motion.div>
         </div>
 
         {/* Portrait */}
@@ -228,7 +219,7 @@ function Portrait() {
               {person.name}
             </div>
             <div className="text-xs text-muted-foreground">
-              Software Engineer · CS Student
+              Software Engineer · Founder
             </div>
           </div>
         </div>

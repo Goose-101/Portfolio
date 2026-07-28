@@ -57,7 +57,7 @@ export default function OpengraphImage() {
             {person.name}
           </div>
           <div style={{ fontSize: 34, color: "#4ea1ff", fontWeight: 600 }}>
-            Software Engineer · Full-Stack Developer · CS Student
+            Software Engineer · Founder · Undergraduate Researcher
           </div>
         </div>
 

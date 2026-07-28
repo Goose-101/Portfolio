@@ -23,8 +23,8 @@ export function Research() {
       <div className="container-px">
         <SectionHeading
           eyebrow="Research"
-          title="Exploring quantum, data & security."
-          description="Beyond coursework, I dig into quantum computing, data management, and cybersecurity through research programs, projects, and certified study."
+          title="Adaptive learning & applied AI."
+          description="As an undergraduate researcher I build adaptive-testing systems and AI-powered tools — from novel difficulty algorithms and Item Response Theory to production LLM pipelines."
         />
 
         <StaggerGroup className="mt-16 space-y-4">

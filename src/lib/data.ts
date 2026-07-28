@@ -10,14 +10,15 @@ import {
   Cpu,
   Database,
   Flag,
+  Gamepad2,
   GitBranch,
   Github,
   GraduationCap,
   Linkedin,
   Mail,
   Rocket,
-  ShieldCheck,
   Users,
+  Wrench,
 } from "lucide-react";
 
 /* ----------------------------------------------------------------- */
@@ -31,13 +32,13 @@ export const person = {
   roles: [
     "Software Engineer",
     "Full-Stack Developer",
-    "Cybersecurity Enthusiast",
-    "Data Analyst",
-    "Computer Science Student",
-    "STEM Educator",
+    "Founder",
+    "Undergraduate Researcher",
+    "AI Developer",
+    "CS Honors Student",
   ],
   tagline:
-    "Computer Science student at Georgia State University with a passion for software engineering, cybersecurity, and data analytics — building impactful, full-stack digital solutions.",
+    "Computer Science Honors student at Georgia State University and founder of Fresh Land — building production full-stack platforms, applied research, and AI-powered tools that solve real problems.",
   location: "Snellville, GA · Open to opportunities",
   email: "ngebru5@student.gsu.edu",
   resumeUrl: "/resume.pdf",
@@ -67,10 +68,10 @@ export const navLinks = [
 /*  Hero highlight stats                                              */
 /* ----------------------------------------------------------------- */
 export const heroStats = [
-  { value: "10+", label: "Certifications" },
-  { value: "90+", label: "Students taught" },
+  { value: "4.0", label: "GPA · Honors College" },
+  { value: "150+", label: "Fresh Land daily users" },
   { value: "1st", label: "Robotics competition" },
-  { value: "3", label: "Languages spoken" },
+  { value: "125+", label: "Research participants" },
 ];
 
 /* ----------------------------------------------------------------- */
@@ -78,15 +79,15 @@ export const heroStats = [
 /* ----------------------------------------------------------------- */
 export const about = {
   paragraphs: [
-    "My fascination with technology started early — taking things apart, writing my first lines of code, and building projects to solve real problems. That curiosity quickly turned into a mission.",
-    "Before college I was already teaching. As an ICT instructor in Addis Ababa and a STEM coordinator in Georgia, I led classes for dozens of students, built a competition-winning robotic arm, and shipped tools like an automated registration system.",
-    "Today I'm pursuing a B.A. in Computer Science at Georgia State University — focused on software engineering, cybersecurity, and data analytics, and channeling everything I've learned into building impactful, human-centered software.",
+    "My fascination with technology started early — writing my first lines of code and building things that solve real problems. That curiosity became a mission I've never let go of.",
+    "In Addis Ababa I taught ICT and led students to build a 6-DOF robotic assistive arm and an IoT attendance system. I've kept shipping ever since — most recently Fresh Land, a production platform I founded to help immigrants navigate a new home, now serving 150+ people a day.",
+    "Today I'm an Honors College student at Georgia State University Perimeter College with a 4.0 GPA, an undergraduate researcher building adaptive-testing systems, and a student leader — channeling it all into impactful, human-centered software.",
   ],
   facts: [
-    { icon: GraduationCap, label: "B.A. Computer Science · Georgia State University" },
-    { icon: Code2, label: "Full-stack web development" },
-    { icon: ShieldCheck, label: "Cybersecurity & data analytics" },
-    { icon: Users, label: "STEM educator & team leader" },
+    { icon: GraduationCap, label: "A.S. Computer Science · GSU Honors College (4.0 GPA)" },
+    { icon: Rocket, label: "Founder of Fresh Land (freshland.cc)" },
+    { icon: Brain, label: "Undergraduate researcher — adaptive testing & AI" },
+    { icon: Users, label: "Speaker of the Senate · student leader" },
   ] as { icon: LucideIcon; label: string }[],
 };
 
@@ -104,45 +105,68 @@ export interface ExperienceItem {
 
 export const experience: ExperienceItem[] = [
   {
-    role: "STEM Program Coordinator",
-    org: "Brookwood High School — Snellville, GA",
-    period: "2024 — 2025",
+    role: "Undergraduate Researcher — CORE",
+    org: "Georgia State University Perimeter College · Dr. Andrew Kim",
+    period: "May 2026 — Present",
     summary:
-      "Coordinated STEM programming and led student workshops while building tools to streamline operations.",
+      "Building a web-based Computerized Adaptive Testing (CAT) platform for the Center for Outreach, Research and Engagement.",
     points: [
-      "Developed an automated registration system that reduced manual input time by 40%.",
-      "Facilitated weekly STEM workshops for 50+ students, promoting innovation and collaborative design.",
-      "Represented Brookwood at the Gwinnett Hackathon — 5th place among all Gwinnett County Public Schools.",
-      "Served as team leader for the TSA (Technology Student Association) club.",
+      "Developed a full-stack CAT platform with a novel three-question block algorithm that adjusts difficulty in real time.",
+      "Designed the experience around psychological-comfort principles to reduce test anxiety during assessment.",
+      "Validated a five-tier difficulty system with a 125+ student survey, applying Item Response Theory (Rasch model).",
     ],
-    tags: ["Leadership", "STEM", "Automation", "Hackathon"],
+    tags: ["Research", "Adaptive Testing", "PHP/MySQL", "IRT"],
   },
   {
-    role: "ICT Instructor",
-    org: "New English Private School — Addis Ababa, Ethiopia",
-    period: "2023 — 2024",
+    role: "Speaker of the Senate — SGA",
+    org: "Georgia State University Perimeter College",
+    period: "Jul 2026 — Present",
     summary:
-      "Taught computing and web development while building hardware and web projects alongside students.",
+      "Highest-ranking legislative officer of the Campus Senate, presiding over proceedings and legislation.",
+    points: [
+      "Preside over all Campus Senate proceedings and legislation.",
+      "Champion student representation and drive policy changes that impact Perimeter College.",
+      "Also lead Student Life onboarding and organize campus-wide events as Student Assistant Lead.",
+    ],
+    tags: ["Leadership", "Governance", "Public Speaking"],
+  },
+  {
+    role: "Supplemental Instructor",
+    org: "Georgia State University Perimeter College",
+    period: "May 2026 — Aug 2026",
+    summary:
+      "Designed and delivered academic support for Precalculus (MATH 1113) alongside faculty.",
+    points: [
+      "Built weekly academic support plans that drove a 73% rise in top-grade attainment.",
+      "Delivered 160+ hours of instruction through office hours, assignment support, and exam reviews.",
+    ],
+    tags: ["Teaching", "Mathematics", "Mentorship"],
+  },
+  {
+    role: "STEM Program Coordinator — TSA",
+    org: "Brookwood High School — Snellville, GA",
+    period: "Aug 2024 — May 2025",
+    summary:
+      "Coordinated the Technology Student Association program and competition teams.",
+    points: [
+      "Facilitated weekly STEM workshops for 25+ teams, promoting innovation and collaborative design.",
+      "Led a cross-functional team at GSMST for Gwinnett Hackathon IV, building a Unity educational game.",
+      "Oversaw C# scripting, asset creation, and version control across the team.",
+    ],
+    tags: ["STEM", "Leadership", "Unity", "C#"],
+  },
+  {
+    role: "ICT Instructor Assistant",
+    org: "New English Private School — Addis Ababa, Ethiopia",
+    period: "Dec 2023 — May 2024",
+    summary:
+      "Taught computing to 40+ students and led hands-on, project-based learning.",
     points: [
       "Directed ICT classes for 40+ students, improving programming literacy and engagement by 30%.",
-      "Created Python and web-development lessons and led project-based, team-oriented learning.",
-      "Designed and built a functional robotic arm with Arduino and servo motors — 1st place in district competitions.",
-      "Built the front-end for the New English Private School website.",
+      "Delivered Python and web-development curricula with an emphasis on real-world problem solving.",
+      "Led project-based sessions building teamwork and technical confidence.",
     ],
-    tags: ["Teaching", "Python", "Arduino", "Front-End"],
-  },
-  {
-    role: "Tutor & Remote Dispatcher",
-    org: "Independent · AMN Trucking",
-    period: "2024 — 2025",
-    summary:
-      "Balanced technical tutoring with real-world operations and communication work.",
-    points: [
-      "Tutored high-school students in mathematics and physics for nearly two years.",
-      "Served as a remote dispatcher for AMN Trucking, coordinating between drivers and clients.",
-      "Sharpened problem-solving, communication, and time-management under real deadlines.",
-    ],
-    tags: ["Tutoring", "Mathematics", "Operations", "Communication"],
+    tags: ["Teaching", "Python", "Web Dev"],
   },
 ];
 
@@ -157,6 +181,8 @@ export interface Project {
   // Tailwind gradient classes drive each card's generated cover art.
   gradient: string;
   icon: LucideIcon;
+  // Optional cover image (path in /public). Shown instead of the icon.
+  image?: string;
   links: {
     github?: string;
     demo?: string;
@@ -167,71 +193,72 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Robotic Assistive Arm",
-    category: "Robotics",
+    title: "Fresh Land",
+    category: "Founder · Web Platform",
     description:
-      "A functional robotic arm built with Arduino and servo motors — awarded 1st place in district competitions.",
-    tech: ["Arduino", "C++", "Servo Motors", "Electronics"],
-    gradient: "from-indigo-500 via-blue-500 to-teal-400",
-    icon: Cpu,
-    links: { github: "#", caseStudy: "#" },
+      "A production immigrant-onboarding platform: a 762+ verified Georgia resource directory, a community forum, and a guided newcomer pathway — serving 150+ daily users, with a multilingual AI assistant powered by Anthropic & Gemini.",
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "Anthropic", "Gemini"],
+    gradient: "from-blue-500 via-indigo-500 to-cyan-400",
+    icon: Rocket,
+    image: "/freshland.png",
+    links: { demo: "https://freshland.cc", caseStudy: "#" },
     featured: true,
   },
   {
-    title: "Automated Registration System",
-    category: "Automation",
+    title: "Robotic Assistive Arm",
+    category: "Robotics · Embedded",
     description:
-      "A registration system that cut manual data-entry time by 40% for a high-school STEM program.",
-    tech: ["Python", "Flask", "SQL"],
+      "A 6-DOF robotic feeding assistant built with a Raspberry Pi and Arduino ESP32 (C++) for real-time servo coordination — improving mealtime independence and winning 1st place at the Addis Ababa district competition.",
+    tech: ["Raspberry Pi", "ESP32", "C++", "Servo Control"],
+    gradient: "from-indigo-500 via-blue-500 to-teal-400",
+    icon: Cpu,
+    links: { caseStudy: "#" },
+    featured: true,
+  },
+  {
+    title: "IoT Attendance System",
+    category: "IoT · Full-Stack",
+    description:
+      "A full-stack IoT attendance system (C++) replacing paper records with RFID scanning and Arduino biometric verification — cutting logging time by 91% with real-time sync to MySQL and Firebase.",
+    tech: ["C++", "Arduino", "RFID", "MySQL", "Firebase"],
     gradient: "from-cyan-400 via-sky-500 to-blue-600",
     icon: Database,
-    links: { github: "#", caseStudy: "#" },
+    links: { caseStudy: "#" },
   },
   {
-    title: "New English School Website",
-    category: "Web Development",
+    title: "NEPS School Website",
+    category: "Front-End",
     description:
-      "Front-end for a private school's website — responsive, accessible, and student-friendly.",
-    tech: ["JavaScript", "HTML/CSS", "Bootstrap"],
+      "The full front-end of a school's official website, built in a 4-person team with interactive menus, sliders, and animations — serving 500+ users with Node.js and Firebase APIs.",
+    tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Node.js"],
     gradient: "from-sky-500 via-blue-500 to-indigo-500",
     icon: Code2,
-    links: { demo: "#", caseStudy: "#" },
+    links: { caseStudy: "#" },
   },
   {
-    title: "IBM Quantum Computing Project",
-    category: "Quantum · Applied",
+    title: "Hackathon Educational Game",
+    category: "Game · Unity",
     description:
-      "Hands-on quantum computing through IBM's Qubit by Qubit program, exploring quantum algorithms and qubit-level computation.",
-    tech: ["Python", "Qiskit", "Quantum"],
+      "A Unity-based educational game built for Gwinnett Hackathon IV, leading C# scripting, asset creation, and version control across a cross-functional team.",
+    tech: ["Unity", "C#", "Game Design"],
     gradient: "from-violet-500 via-blue-500 to-cyan-400",
-    icon: Brain,
+    icon: Gamepad2,
     links: { caseStudy: "#" },
   },
   {
     title: "Developer Portfolio",
     category: "Web · This Site",
     description:
-      "A premium, animated Next.js portfolio focused on motion, accessibility, and performance.",
+      "This portfolio — a premium, animated Next.js site focused on motion, accessibility, and performance.",
     tech: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
-    gradient: "from-blue-500 via-indigo-500 to-cyan-400",
-    icon: Rocket,
-    links: { github: "https://github.com/Goose-101", demo: "#" },
-    featured: true,
-  },
-  {
-    title: "Responsive Web Design Projects",
-    category: "Front-End",
-    description:
-      "A collection of responsive UI builds completed through freeCodeCamp's 300+ hour certification.",
-    tech: ["HTML/CSS", "JavaScript", "Responsive"],
     gradient: "from-emerald-400 via-teal-500 to-cyan-500",
     icon: Flag,
-    links: { github: "#" },
+    links: { github: "https://github.com/Goose-101" },
   },
 ];
 
 /* ----------------------------------------------------------------- */
-/*  Research & exploration                                            */
+/*  Research                                                          */
 /* ----------------------------------------------------------------- */
 export interface ResearchItem {
   title: string;
@@ -244,31 +271,31 @@ export interface ResearchItem {
 
 export const research: ResearchItem[] = [
   {
-    title: "Quantum Computing — Qubit by Qubit",
+    title: "Computerized Adaptive Testing (CAT) Platform",
     type: "Ongoing",
-    venue: "IBM · The Coding School",
-    year: "2024",
+    venue: "CORE · GSU Perimeter College (Dr. Andrew Kim)",
+    year: "2026 — Present",
     description:
-      "Studied quantum algorithms and qubit-level computation through IBM's Qubit by Qubit program, completing a hands-on quantum computing project.",
-    tags: ["Quantum Computing", "Python", "Qiskit"],
+      "A full-stack adaptive-testing platform whose novel three-question block algorithm adjusts difficulty in real time, designed with psychological-comfort principles to reduce test anxiety.",
+    tags: ["Adaptive Testing", "Algorithms", "Full-Stack", "EdTech"],
   },
   {
-    title: "CORE Summer Research Experience",
+    title: "Empirical Difficulty Calibration with Item Response Theory",
     type: "Presentation",
-    venue: "Summer Research Program",
-    year: "2025",
+    venue: "Multi-Institutional Study",
+    year: "2026",
     description:
-      "Engaged in a structured summer research experience centered on literature review and analytical writing in computer science.",
-    tags: ["Research", "Literature Review", "Analysis"],
+      "Administered a compensated survey to 125+ students to validate a five-tier difficulty classification, applying the Rasch model to calibrate question-difficulty parameters (PHP · MySQL).",
+    tags: ["Item Response Theory", "Rasch Model", "Data Analysis"],
   },
   {
-    title: "Data Management & Cybersecurity Foundations",
+    title: "Applied AI — Multilingual Assistant",
     type: "Ongoing",
-    venue: "UNICEF · Cybrary",
-    year: "2024 — 2025",
+    venue: "Fresh Land",
+    year: "2025 — Present",
     description:
-      "Applied learning in data handling, management, and cybersecurity fundamentals through certified coursework and projects.",
-    tags: ["Data Management", "Cybersecurity", "Analytics"],
+      "Built a multilingual AI assistant integrating Anthropic and Gemini with custom server-side inference pipelines and real-time token streaming, reducing user response time by 60%.",
+    tags: ["Applied AI", "LLMs", "Inference", "Streaming"],
   },
 ];
 
@@ -285,32 +312,37 @@ export const skillCategories: SkillCategory[] = [
   {
     title: "Languages",
     icon: Code2,
-    skills: ["Python", "Java", "JavaScript", "C++", "HTML/CSS", "SQL"],
+    skills: ["Python", "TypeScript", "JavaScript", "Java", "C++", "C#", "PHP", "Go", "SQL", "R"],
   },
   {
     title: "Frameworks",
     icon: GitBranch,
-    skills: ["React", "Node.js", "Flask", "Bootstrap"],
+    skills: ["React", "Next.js", "Node.js", "Express", "Django", "FastAPI", "Flask", "React Native"],
   },
   {
-    title: "Platforms & Tools",
-    icon: Cloud,
-    skills: ["GitHub", "Google Cloud", "Firebase", "VS Code", "Figma", "Replit"],
-  },
-  {
-    title: "Hardware & Embedded",
-    icon: Cpu,
-    skills: ["Arduino", "Servo Motors", "Electronics"],
-  },
-  {
-    title: "Data & Analytics",
-    icon: Database,
-    skills: ["Data Visualization", "SQL", "Data Structures", "Algorithms"],
-  },
-  {
-    title: "Core Strengths",
+    title: "AI & Data",
     icon: Brain,
-    skills: ["Problem Solving", "Debugging", "Technical Writing", "Leadership"],
+    skills: ["Pandas", "scikit-learn", "OpenCV", "Matplotlib", "Google ADK", "Qiskit"],
+  },
+  {
+    title: "Databases",
+    icon: Database,
+    skills: ["PostgreSQL", "MySQL", "Firebase", "Supabase", "SQLite", "Drizzle"],
+  },
+  {
+    title: "Cloud & DevOps",
+    icon: Cloud,
+    skills: ["Docker", "Kubernetes", "Google Cloud", "Cloudflare", "REST API", "Git"],
+  },
+  {
+    title: "Embedded & Hardware",
+    icon: Cpu,
+    skills: ["Arduino", "Raspberry Pi", "ESP32", "RFID", "Servo Control"],
+  },
+  {
+    title: "Tools",
+    icon: Wrench,
+    skills: ["VS Code", "Figma", "Jupyter", "Unity", "Linux", "Swagger/OpenAPI"],
   },
 ];
 
