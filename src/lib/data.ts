@@ -59,7 +59,6 @@ export const navLinks = [
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
-  { id: "research", label: "Research" },
   { id: "skills", label: "Skills" },
   { id: "contact", label: "Contact" },
 ] as const;
@@ -274,48 +273,6 @@ export const projects: Project[] = [
     gradient: "from-emerald-400 via-teal-500 to-cyan-500",
     icon: Flag,
     links: { github: "https://github.com/Goose-101" },
-  },
-];
-
-/* ----------------------------------------------------------------- */
-/*  Research                                                          */
-/* ----------------------------------------------------------------- */
-export interface ResearchItem {
-  title: string;
-  type: "Publication" | "Presentation" | "Ongoing";
-  venue: string;
-  year: string;
-  description: string;
-  tags: string[];
-}
-
-export const research: ResearchItem[] = [
-  {
-    title: "Computerized Adaptive Testing (CAT) Platform",
-    type: "Ongoing",
-    venue: "CORE · GSU Perimeter College (Dr. Andrew Kim)",
-    year: "2026 — Present",
-    description:
-      "A full-stack adaptive-testing platform whose novel three-question block algorithm adjusts difficulty in real time, designed with psychological-comfort principles to reduce test anxiety.",
-    tags: ["Adaptive Testing", "Algorithms", "Full-Stack", "EdTech"],
-  },
-  {
-    title: "Empirical Difficulty Calibration with Item Response Theory",
-    type: "Presentation",
-    venue: "Multi-Institutional Study",
-    year: "2026",
-    description:
-      "Administered a compensated survey to 135+ students to validate a five-tier difficulty classification, applying the Rasch model to calibrate question-difficulty parameters (PHP · MySQL).",
-    tags: ["Item Response Theory", "Rasch Model", "Data Analysis"],
-  },
-  {
-    title: "Applied AI — Multilingual Assistant",
-    type: "Ongoing",
-    venue: "Fresh Land",
-    year: "2025 — Present",
-    description:
-      "Built a multilingual AI assistant integrating Anthropic and Gemini with custom server-side inference pipelines and real-time token streaming, reducing user response time by 60%.",
-    tags: ["Applied AI", "LLMs", "Inference", "Streaming"],
   },
 ];
 
