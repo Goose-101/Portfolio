@@ -71,7 +71,7 @@ export const heroStats = [
   { value: "4.0", label: "GPA · Honors College" },
   { value: "150+", label: "Fresh Land daily users" },
   { value: "1st", label: "Robotics competition" },
-  { value: "125+", label: "Research participants" },
+  { value: "135+", label: "Research participants" },
 ];
 
 /* ----------------------------------------------------------------- */
@@ -113,7 +113,7 @@ export const experience: ExperienceItem[] = [
     points: [
       "Developed a full-stack CAT platform with a novel three-question block algorithm that adjusts difficulty in real time.",
       "Designed the experience around psychological-comfort principles to reduce test anxiety during assessment.",
-      "Validated a five-tier difficulty system with a 125+ student survey, applying Item Response Theory (Rasch model).",
+      "Validated a five-tier difficulty system with a 135+ student survey, applying Item Response Theory (Rasch model).",
     ],
     tags: ["Research", "Adaptive Testing", "PHP/MySQL", "IRT"],
   },
@@ -126,9 +126,22 @@ export const experience: ExperienceItem[] = [
     points: [
       "Preside over all Campus Senate proceedings and legislation.",
       "Champion student representation and drive policy changes that impact Perimeter College.",
-      "Also lead Student Life onboarding and organize campus-wide events as Student Assistant Lead.",
     ],
     tags: ["Leadership", "Governance", "Public Speaking"],
+  },
+  {
+    role: "Student Assistant Lead — Student Life",
+    org: "Student Engagement Center · Georgia State University Perimeter College",
+    period: "Jul 2026 — Present",
+    summary:
+      "Leading recruitment, volunteer training, and campus-wide programming out of the Student Engagement Center.",
+    points: [
+      "Spearhead recruitment and onboarding for Student Life and PAC, designing comprehensive training that builds high-performing volunteer teams.",
+      "Architect campus-wide events end to end, from concept and creative design through marketing and day-of execution.",
+      "Drive student participation through strategic outreach, fostering a more vibrant and inclusive campus community.",
+      "Offered the lead role after two consecutive semesters volunteering across Student Engagement, the department housing both PAC and Student Life.",
+    ],
+    tags: ["Leadership", "Event Programming", "Marketing"],
   },
   {
     role: "Supplemental Instructor",
@@ -143,7 +156,7 @@ export const experience: ExperienceItem[] = [
     tags: ["Teaching", "Mathematics", "Mentorship"],
   },
   {
-    role: "STEM Program Coordinator — TSA",
+    role: "STEM Program Coordinator — TSA (Technology Student Association)",
     org: "Brookwood High School — Snellville, GA",
     period: "Aug 2024 — May 2025",
     summary:
@@ -222,11 +235,11 @@ export const projects: Project[] = [
     title: "IoT Attendance System",
     category: "IoT · Full-Stack",
     description:
-      "A full-stack IoT attendance system (C++) replacing paper records with RFID scanning and Arduino biometric verification — cutting logging time by 91% with real-time sync to MySQL and Firebase.",
+      "In many Ethiopian schools attendance is still recorded by hand — slow and easy to get wrong. I co-engineered an IoT system using Arduino (C++), RFID, and MySQL/Firebase to automate it end to end, cutting input time by 91% and sharply improving accuracy. I presented it to the school's administration, faculty, committee, staff, and parents, making the case for how technology can modernize the way education runs, not just at my school but across Ethiopia's schools.",
     tech: ["C++", "Arduino", "RFID", "MySQL", "Firebase"],
     gradient: "from-cyan-400 via-sky-500 to-blue-600",
     icon: Database,
-    images: ["/iot-attendance.png", "/iot-presentation.png"],
+    images: ["/iot-attendance.png", "/Presentation_Photo.png"],
     links: { caseStudy: "#" },
     featured: true,
   },
@@ -291,7 +304,7 @@ export const research: ResearchItem[] = [
     venue: "Multi-Institutional Study",
     year: "2026",
     description:
-      "Administered a compensated survey to 125+ students to validate a five-tier difficulty classification, applying the Rasch model to calibrate question-difficulty parameters (PHP · MySQL).",
+      "Administered a compensated survey to 135+ students to validate a five-tier difficulty classification, applying the Rasch model to calibrate question-difficulty parameters (PHP · MySQL).",
     tags: ["Item Response Theory", "Rasch Model", "Data Analysis"],
   },
   {
