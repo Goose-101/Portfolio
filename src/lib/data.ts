@@ -84,7 +84,7 @@ export const about = {
     "Today I'm an Honors College student at Georgia State University Perimeter College with a 4.0 GPA, an undergraduate researcher building adaptive-testing systems, and a student leader — channeling it all into impactful, human-centered software.",
   ],
   facts: [
-    { icon: GraduationCap, label: "A.S. Computer Science · GSU Honors College (4.0 GPA)" },
+    { icon: GraduationCap, label: "Computer Science · GSU Honors College (4.0 GPA)" },
     { icon: Rocket, label: "Founder of Fresh Land (freshland.cc)" },
     { icon: Brain, label: "Undergraduate researcher — adaptive testing & AI" },
     { icon: Users, label: "Speaker of the Senate · student leader" },
@@ -105,7 +105,7 @@ export interface ExperienceItem {
 
 export const experience: ExperienceItem[] = [
   {
-    role: "Undergraduate Researcher — CORE",
+    role: "Undergraduate Researcher — C.O.R.E.",
     org: "Georgia State University Perimeter College · Dr. Andrew Kim",
     period: "May 2026 — Present",
     summary:
@@ -183,6 +183,9 @@ export interface Project {
   icon: LucideIcon;
   // Optional cover image (path in /public). Shown instead of the icon.
   image?: string;
+  // Optional pair/set of covers (paths in /public), laid out side by side and
+  // fully contained so nothing gets cropped. Takes precedence over `image`.
+  images?: string[];
   links: {
     github?: string;
     demo?: string;
@@ -223,7 +226,9 @@ export const projects: Project[] = [
     tech: ["C++", "Arduino", "RFID", "MySQL", "Firebase"],
     gradient: "from-cyan-400 via-sky-500 to-blue-600",
     icon: Database,
+    images: ["/iot-attendance.png", "/iot-presentation.png"],
     links: { caseStudy: "#" },
+    featured: true,
   },
   {
     title: "NEPS School Website",
@@ -233,7 +238,8 @@ export const projects: Project[] = [
     tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Node.js"],
     gradient: "from-sky-500 via-blue-500 to-indigo-500",
     icon: Code2,
-    links: { caseStudy: "#" },
+    image: "/neps.png",
+    links: { demo: "https://www.nepschools.com/home.html", caseStudy: "#" },
   },
   {
     title: "Hackathon Educational Game",

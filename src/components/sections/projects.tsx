@@ -22,7 +22,7 @@ export function Projects() {
           description="A mix of shipped products, research prototypes, and hardware builds — each solving a real problem end to end."
         />
 
-        <StaggerGroup className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <StaggerGroup className="mt-16 grid grid-flow-row-dense gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <StaggerItem
               key={project.title}
@@ -58,7 +58,24 @@ function ProjectCard({ project }: { project: Project }) {
           project.gradient
         )}
       >
-        {project.image ? (
+        {project.images?.length ? (
+          // Multiple covers: side by side, each cropped to fill its half so the
+          // window has no empty gradient showing through. A hairline divider
+          // keeps the two photos readable as separate shots.
+          <div className="absolute inset-0 flex gap-px bg-white/10">
+            {project.images.map((src, i) => (
+              <div key={src} className="relative min-w-0 flex-1 overflow-hidden">
+                <Image
+                  src={src}
+                  alt={`${project.title} — view ${i + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 320px"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        ) : project.image ? (
           <Image
             src={project.image}
             alt={project.title}
