@@ -79,9 +79,9 @@ export const heroStats = [
 /* ----------------------------------------------------------------- */
 export const about = {
   paragraphs: [
-    "My fascination with technology started early — writing my first lines of code and building things that solve real problems. That curiosity became a mission I've never let go of.",
-    "In Addis Ababa I taught ICT and led students to build a 6-DOF robotic assistive arm and an IoT attendance system. I've kept shipping ever since — most recently Fresh Land, a production platform I founded to help immigrants navigate a new home, now serving 150+ people a day.",
-    "Today I'm an Honors College student at Georgia State University Perimeter College with a 4.0 GPA, an undergraduate researcher building adaptive-testing systems, and a student leader — channeling it all into impactful, human-centered software.",
+    "My fascination with technology started early, with my first lines of code and the first things I built to solve real problems. That curiosity became a mission I've never let go of.",
+    "In Addis Ababa I taught ICT and led students to build a 6-DOF robotic assistive arm and an IoT attendance system. I've kept shipping ever since. Most recently that's Fresh Land, a production platform I founded to help immigrants navigate a new home, now serving 150+ people a day.",
+    "Today I'm an Honors College student at Georgia State University Perimeter College with a 4.0 GPA, an undergraduate researcher building adaptive-testing systems, and a student leader. I channel it all into impactful, human-centered software.",
   ],
   facts: [
     { icon: GraduationCap, label: "Computer Science · GSU Honors College (4.0 GPA)" },
@@ -224,10 +224,11 @@ export const projects: Project[] = [
     title: "Robotic Assistive Arm",
     category: "Robotics · Embedded",
     description:
-      "A 6-DOF robotic feeding assistant built with a Raspberry Pi and Arduino ESP32 (C++) for real-time servo coordination — improving mealtime independence and winning 1st place at the Addis Ababa district competition.",
+      "A 6-DOF robotic feeding assistant built with a Raspberry Pi and Arduino ESP32 (C++) for real-time servo coordination, improving mealtime independence and winning 1st place at the Addis Ababa district competition. I led a 3-member team through design and build, integrating a custom gripper, joint mechanisms, and embedded motion sequencing with safety I/O so the arm could assist users with limited mobility.",
     tech: ["Raspberry Pi", "ESP32", "C++", "Servo Control"],
     gradient: "from-indigo-500 via-blue-500 to-teal-400",
     icon: Cpu,
+    image: "/Robotic_Arm.jpg",
     links: { caseStudy: "#" },
     featured: true,
   },
