@@ -42,8 +42,8 @@ export function About() {
           <Reveal delay={0.2}>
             <figure className="mt-4 rounded-2xl border-l-2 border-accent/60 bg-white/[0.02] px-6 py-5">
               <blockquote className="font-display text-xl font-medium leading-snug text-foreground/90">
-                &ldquo;Great software should feel effortless — the hard work
-                belongs behind the curtain.&rdquo;
+                &ldquo;Nothing is out of reach for the man who never stops
+                reaching.&rdquo;
               </blockquote>
               <figcaption className="mt-2 text-sm text-muted-foreground">
                 — {person.firstName}
