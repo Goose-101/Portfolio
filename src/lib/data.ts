@@ -10,7 +10,6 @@ import {
   Cpu,
   Database,
   Flag,
-  Gamepad2,
   GitBranch,
   Github,
   GraduationCap,
@@ -266,16 +265,6 @@ export const projects: Project[] = [
     icon: Code2,
     image: "/neps.png",
     links: { demo: "https://www.nepschools.com/home.html", caseStudy: "#" },
-  },
-  {
-    title: "Hackathon Educational Game",
-    category: "Game · Unity",
-    description:
-      "A Unity-based educational game built for Gwinnett Hackathon IV, leading C# scripting, asset creation, and version control across a cross-functional team.",
-    tech: ["Unity", "C#", "Game Design"],
-    gradient: "from-violet-500 via-blue-500 to-cyan-400",
-    icon: Gamepad2,
-    links: { caseStudy: "#" },
   },
   {
     title: "Developer Portfolio",
