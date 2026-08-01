@@ -112,6 +112,7 @@ export const experience: ExperienceItem[] = [
     points: [
       "Founded and lead an organization that turns coursework into industry readiness, running hackathons, monthly coding challenges, and hands-on Arduino and hardware competitions that give members portfolio-ready projects.",
       "Connect students directly to opportunity through alumni and transfer-student networking, industry speaker events, and a Career Services partnership delivering resume workshops, mock interviews, and internship prep.",
+      "Push back on the discouraging rumors students hear about the computer science job market, turning that doubt back into curiosity and sending members into the real world prepared and confident rather than anxious.",
     ],
     tags: ["Founder", "Leadership", "Community", "Career Development"],
   },
