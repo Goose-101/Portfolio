@@ -104,6 +104,18 @@ export interface ExperienceItem {
 
 export const experience: ExperienceItem[] = [
   {
+    role: "Founder & President — Rising Tech Society",
+    org: "Georgia State University Perimeter College",
+    period: "Aug 2026 — Present",
+    summary:
+      "A student-led programming organization serving Computer Science and STEM students across all five Perimeter College campuses.",
+    points: [
+      "Founded and lead an organization that turns coursework into industry readiness, running hackathons, monthly coding challenges, and hands-on Arduino and hardware competitions that give members portfolio-ready projects.",
+      "Connect students directly to opportunity through alumni and transfer-student networking, industry speaker events, and a Career Services partnership delivering resume workshops, mock interviews, and internship prep.",
+    ],
+    tags: ["Founder", "Leadership", "Community", "Career Development"],
+  },
+  {
     role: "Undergraduate Researcher — C.O.R.E.",
     org: "Georgia State University Perimeter College · Dr. Andrew Kim",
     period: "May 2026 — Present",
