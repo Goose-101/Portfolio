@@ -109,14 +109,14 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden items-center gap-2 lg:flex">
+            <Button size="sm" onClick={() => go("contact")}>
+              Let&apos;s talk
+            </Button>
             <Button asChild size="sm" variant="outline">
               <a href={person.resumeUrl} download>
                 <Download />
                 Resume
               </a>
-            </Button>
-            <Button size="sm" onClick={() => go("contact")}>
-              Let&apos;s talk
             </Button>
           </div>
 
