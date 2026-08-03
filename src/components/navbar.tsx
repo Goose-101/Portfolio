@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, Terminal } from "lucide-react";
+import { Menu, X, Terminal, Download } from "lucide-react";
 import { navLinks, person } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -108,7 +108,13 @@ export function Navbar() {
           </ul>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:block">
+          <div className="hidden items-center gap-2 lg:flex">
+            <Button asChild size="sm" variant="outline">
+              <a href={person.resumeUrl} download>
+                <Download />
+                Resume
+              </a>
+            </Button>
             <Button size="sm" onClick={() => go("contact")}>
               Let&apos;s talk
             </Button>
@@ -170,9 +176,15 @@ export function Navbar() {
                   </button>
                 </motion.li>
               ))}
-              <div className="p-2 pt-3">
+              <div className="flex flex-col gap-2 p-2 pt-3">
                 <Button className="w-full" size="lg" onClick={() => go("contact")}>
                   Get in touch
+                </Button>
+                <Button asChild className="w-full" size="lg" variant="outline">
+                  <a href={person.resumeUrl} download onClick={() => setOpen(false)}>
+                    <Download />
+                    Resume
+                  </a>
                 </Button>
               </div>
             </motion.ul>

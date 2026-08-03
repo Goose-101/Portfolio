@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Download, Loader2, Send, Check, AlertCircle } from "lucide-react";
+import { Loader2, Send, Check, AlertCircle } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
-import { contactChannels, person } from "@/lib/data";
+import { contactChannels } from "@/lib/data";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -77,15 +77,6 @@ export function Contact() {
                 </a>
               </Reveal>
             ))}
-
-            <Reveal delay={0.2}>
-              <Button asChild variant="outline" size="lg" className="mt-1 w-full">
-                <a href={person.resumeUrl} download>
-                  <Download />
-                  Download Résumé
-                </a>
-              </Button>
-            </Reveal>
           </div>
 
           {/* Form */}
