@@ -135,8 +135,10 @@ export const experience: ExperienceItem[] = [
     summary:
       "Highest-ranking legislative officer of the Campus Senate, presiding over proceedings and legislation.",
     points: [
-      "Preside over all Campus Senate proceedings and legislation.",
-      "Champion student representation and drive policy changes that impact Perimeter College.",
+      "Preside over the Campus Senate as its highest-ranking legislative officer, running bi-weekly sessions and the clerical process behind every piece of legislation.",
+      "Drive legislation from draft to adoption, signing 8+ bills, resolutions, and Senate orders into effect.",
+      "Administer the SGA Campus Executive Committee and represent Perimeter College on the SGA University-Wide Executive Committee.",
+      "Organized “Meet the Dean,” a campus event that drew 90+ students and opened a direct line between the student body and administration.",
     ],
     tags: ["Leadership", "Governance", "Public Speaking"],
   },
