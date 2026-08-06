@@ -117,7 +117,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     role: "Undergraduate Researcher — C.O.R.E.",
-    org: "Georgia State University Perimeter College · Dr. Andrew Kim",
+    org: "Georgia State University Perimeter College · Dr. Andrew Kim — Remote/Dunwoody, GA",
     period: "May 2026 — Present",
     summary:
       "Building a web-based Computerized Adaptive Testing (CAT) platform for the Center for Outreach, Research and Engagement.",
@@ -130,21 +130,21 @@ export const experience: ExperienceItem[] = [
   },
   {
     role: "Speaker of the Senate — SGA",
-    org: "Georgia State University Perimeter College",
+    org: "Georgia State University Perimeter College — Clarkston, GA",
     period: "Jul 2026 — Present",
     summary:
-      "Highest-ranking legislative officer of the Campus Senate, presiding over proceedings and legislation.",
+      "Highest-ranking legislative officer of the Clarkston Campus Senate, presiding over proceedings and legislation.",
     points: [
-      "Preside over the Campus Senate as its highest-ranking legislative officer, running bi-weekly sessions and the clerical process behind every piece of legislation.",
+      "Run bi-weekly Senate sessions and the clerical process behind every piece of legislation.",
       "Drive legislation from draft to adoption, signing 8+ bills, resolutions, and Senate orders into effect.",
-      "Administer the SGA Campus Executive Committee and represent Perimeter College on the SGA University-Wide Executive Committee.",
+      "Administer the SGA Campus Executive Committee and represent the Clarkston campus on the SGA University-Wide Executive Committee.",
       "Organized “Meet the Dean,” a campus event that drew 90+ students and opened a direct line between the student body and administration.",
     ],
     tags: ["Leadership", "Governance", "Public Speaking"],
   },
   {
     role: "Student Assistant Lead — Student Life",
-    org: "Student Engagement Center · Georgia State University Perimeter College",
+    org: "Student Engagement Center · Georgia State University Perimeter College — Clarkston, GA",
     period: "Jul 2026 — Present",
     summary:
       "Leading recruitment, volunteer training, and campus-wide programming out of the Student Engagement Center.",
@@ -158,7 +158,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     role: "Supplemental Instructor",
-    org: "Georgia State University Perimeter College",
+    org: "Georgia State University Perimeter College — Dunwoody, GA",
     period: "May 2026 — Aug 2026",
     summary:
       "Designed and delivered academic support for Precalculus (MATH 1113) alongside faculty.",
