@@ -67,15 +67,9 @@ export function Footer() {
 
         <div className="hairline my-10" />
 
-        <div className="flex flex-col items-center justify-between gap-4 text-sm text-muted-foreground sm:flex-row">
+        <div className="flex flex-col items-center gap-4 text-sm text-muted-foreground">
           <p>
             © {year} {person.name}. All rights reserved.
-          </p>
-          <p className="flex items-center gap-1.5">
-            Designed & built with
-            <span className="text-accent">Next.js</span>
-            &
-            <span className="text-cyan">Framer Motion</span>.
           </p>
         </div>
       </div>
