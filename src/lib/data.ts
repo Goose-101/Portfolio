@@ -65,7 +65,6 @@ export const navLinks = [
 /*  Hero highlight stats                                              */
 /* ----------------------------------------------------------------- */
 export const heroStats = [
-  { value: "4.0", label: "GPA · Honors College" },
   { value: "150+", label: "Fresh Land daily users" },
   { value: "1st", label: "Robotics competition" },
   { value: "135+", label: "Research participants" },
@@ -76,16 +75,15 @@ export const heroStats = [
 /* ----------------------------------------------------------------- */
 export const about = {
   paragraphs: [
-    "I'm an Honors Computer Science student in my second year at Georgia State University Perimeter College, carrying a 4.0 GPA and focused on software engineering, AI engineering, AI/ML research, cloud computing, and cybersecurity — with plans to transfer to a four-year institution and keep going.",
-    "That direction started early, with my first lines of code and the first things I built to solve real problems. In Addis Ababa I taught computing to students not much younger than me, and together we built things our school actually needed — a robotic arm to help people eat on their own, and a system that replaced a slow paper attendance process. Standing in front of administrators, faculty, and parents to explain why it mattered taught me as much as building it did.",
-    "These days that looks like Fresh Land, a platform I founded that helps immigrants find their footing in a new home and now serves 150+ people a day. Alongside it I research how to make testing feel less intimidating, tutor students through the math that scares them, founded a tech society spanning all five Perimeter campuses, and serve as Speaker of the Senate.",
-    "What connects all of it is people. I care less about which tools I'm using than about who's on the other side of the screen, and the problems I'm drawn to are the ones where good software quietly makes someone's day easier.",
+    "I'm an Honors Computer Science student in my second year at Georgia State University Perimeter College, focused on software engineering, AI engineering, AI/ML research, cloud computing, and cybersecurity, with plans to transfer to a four year institution. Most of what I know came from curiosity, failing, getting back up, and the occasional 2 a.m. bug that turned out to be one missing character. I like being early enough in the field to stay curious about all of it, and far enough in to ship things people actually use.",
+    "That direction started early, with my first lines of code and the first things I built to solve real problems. In Addis Ababa I taught computing to students not much younger than me, and together we built things our school actually needed: a robotic arm to help people eat on their own, and a system that replaced a slow paper attendance process. Standing in front of administrators, faculty, and parents to explain why it mattered taught me as much as building it did.",
+    "I build for the same reason now. Fresh Land, a platform I founded to help immigrants find their footing in a new home, serves 150+ people a day. Alongside it I work as an undergraduate researcher, earning my Research Scholar distinction after several research projects inside my school, and I founded Rising Tech Society, a programming club that serves not just one campus but all five Perimeter College campuses, closing a three year gap without an active club for Computer Science and other STEM majors. What connects all of it is people: I care less about which tools I'm using than about who's on the other side of the screen, and the problems I'm drawn to are the ones where good software quietly makes someone's day easier.",
   ],
   facts: [
-    { icon: GraduationCap, label: "Computer Science · GSU Honors College (4.0 GPA)" },
+    { icon: GraduationCap, label: "Computer Science · GSU Honors College" },
     { icon: Rocket, label: "Founder of Fresh Land (freshland.cc) · 150+ daily users" },
-    { icon: Brain, label: "Undergraduate researcher — adaptive testing & AI" },
-    { icon: Flag, label: "Founder & President — Rising Tech Society" },
+    { icon: Brain, label: "Undergraduate researcher · adaptive testing & AI" },
+    { icon: Flag, label: "Founder & President · Rising Tech Society" },
   ] as { icon: LucideIcon; label: string }[],
 };
 
