@@ -16,7 +16,6 @@ import {
   Linkedin,
   Mail,
   Rocket,
-  Users,
   Wrench,
 } from "lucide-react";
 
@@ -77,15 +76,16 @@ export const heroStats = [
 /* ----------------------------------------------------------------- */
 export const about = {
   paragraphs: [
-    "My fascination with technology started early, with my first lines of code and the first things I built to solve real problems. That curiosity became a mission I've never let go of.",
-    "In Addis Ababa I taught ICT and led students to build a 6-DOF robotic assistive arm and an IoT attendance system. I've kept shipping ever since. Most recently that's Fresh Land, a production platform I founded to help immigrants navigate a new home, now serving 150+ people a day.",
-    "Today I'm an Honors College student at Georgia State University Perimeter College with a 4.0 GPA, an undergraduate researcher building adaptive-testing systems, and a student leader. I channel it all into impactful, human-centered software.",
+    "I'm an Honors Computer Science student in my second year at Georgia State University Perimeter College, carrying a 4.0 GPA and focused on software engineering, AI engineering, AI/ML research, cloud computing, and cybersecurity — with plans to transfer to a four-year institution and keep going.",
+    "That direction started early, with my first lines of code and the first things I built to solve real problems. In Addis Ababa I taught computing to students not much younger than me, and together we built things our school actually needed — a robotic arm to help people eat on their own, and a system that replaced a slow paper attendance process. Standing in front of administrators, faculty, and parents to explain why it mattered taught me as much as building it did.",
+    "These days that looks like Fresh Land, a platform I founded that helps immigrants find their footing in a new home and now serves 150+ people a day. Alongside it I research how to make testing feel less intimidating, tutor students through the math that scares them, founded a tech society spanning all five Perimeter campuses, and serve as Speaker of the Senate.",
+    "What connects all of it is people. I care less about which tools I'm using than about who's on the other side of the screen, and the problems I'm drawn to are the ones where good software quietly makes someone's day easier.",
   ],
   facts: [
     { icon: GraduationCap, label: "Computer Science · GSU Honors College (4.0 GPA)" },
-    { icon: Rocket, label: "Founder of Fresh Land (freshland.cc)" },
+    { icon: Rocket, label: "Founder of Fresh Land (freshland.cc) · 150+ daily users" },
     { icon: Brain, label: "Undergraduate researcher — adaptive testing & AI" },
-    { icon: Users, label: "Speaker of the Senate · student leader" },
+    { icon: Flag, label: "Founder & President — Rising Tech Society" },
   ] as { icon: LucideIcon; label: string }[],
 };
 
