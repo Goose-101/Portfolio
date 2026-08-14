@@ -52,7 +52,7 @@ export function Contact() {
           align="center"
         />
 
-        <div className="mx-auto mt-16 grid max-w-5xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="mx-auto mt-16 grid max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           {/* Channels */}
           <div className="flex flex-col gap-4">
             {contactChannels.map((c, i) => (

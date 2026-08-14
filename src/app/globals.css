@@ -83,7 +83,7 @@
 /* ------------------------------------------------------------------ */
 @layer components {
   .container-px {
-    @apply mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 xl:px-24;
+    @apply mx-auto w-full max-w-[1728px] px-6 sm:px-10 lg:px-12 xl:px-16 2xl:px-20;
   }
 
   /* Glassmorphism card surface */
