@@ -53,7 +53,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-border/70 bg-white/[0.03] px-4 py-1.5 text-xs font-medium text-muted-foreground"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-border/70 bg-white/[0.03] px-4 py-1.5 text-[13px] font-medium text-muted-foreground"
           >
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
@@ -66,7 +66,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: duration.base, ease, delay: 0.08 }}
-            className="font-display text-[clamp(2.6rem,7vw,5rem)] font-bold leading-[0.98] tracking-tight"
+            className="font-display text-[clamp(2.85rem,7.4vw,5.4rem)] font-bold leading-[0.98] tracking-tight"
           >
             {person.name.split(" ")[0]}
             <br />
@@ -79,7 +79,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: duration.base, ease, delay: 0.18 }}
-            className="mt-5 text-lg font-medium text-foreground/90 sm:text-xl"
+            className="mt-5 text-xl font-medium text-foreground/90 sm:text-2xl"
           >
             <RoleRotator />
           </motion.p>
@@ -88,7 +88,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: duration.base, ease, delay: 0.28 }}
-            className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
+            className="mt-5 max-w-xl text-[17px] leading-relaxed text-muted-foreground sm:text-lg"
           >
             {person.tagline} My interests span full-stack development,
             artificial intelligence, research, cybersecurity, and building
@@ -141,10 +141,10 @@ export function Hero() {
               key={s.label}
               className="flex-1 rounded-xl px-4 py-3 text-center transition-colors hover:bg-white/[0.03]"
             >
-              <div className="font-display text-2xl font-bold text-foreground">
+              <div className="font-display text-[1.6rem] font-bold text-foreground">
                 {s.value}
               </div>
-              <div className="mt-0.5 text-xs text-muted-foreground">
+              <div className="mt-0.5 text-[13px] text-muted-foreground">
                 {s.label}
               </div>
             </div>

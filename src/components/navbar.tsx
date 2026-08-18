@@ -72,7 +72,7 @@ export function Navbar() {
           {/* Brand */}
           <button
             onClick={() => go("home")}
-            className="group flex items-center gap-2.5 pl-1 font-display text-sm font-semibold tracking-tight"
+            className="group flex items-center gap-2.5 pl-1 font-display text-[15px] font-semibold tracking-tight"
             aria-label="Go to top"
           >
             <span className="grid h-8 w-8 place-items-center rounded-lg bg-accent/15 text-accent ring-1 ring-accent/30 transition-colors group-hover:bg-accent/25">
@@ -88,7 +88,7 @@ export function Navbar() {
                 <button
                   onClick={() => go(link.id)}
                   className={cn(
-                    "relative rounded-full px-4 py-2 text-sm font-medium transition-colors",
+                    "relative rounded-full px-4 py-2 text-[15px] font-medium transition-colors",
                     active === link.id
                       ? "text-foreground"
                       : "text-muted-foreground hover:text-foreground"
