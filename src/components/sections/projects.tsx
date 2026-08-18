@@ -92,7 +92,7 @@ function ProjectCard({ project }: { project: Project }) {
             </div>
           </>
         )}
-        <span className="absolute left-4 top-4 z-20 rounded-full bg-black/40 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+        <span className="absolute left-4 top-4 z-20 rounded-full bg-black/40 px-3 py-1 text-[13px] font-medium text-white backdrop-blur-sm">
           {project.category}
         </span>
         {/* Full-cover click target → primary link */}
@@ -109,7 +109,7 @@ function ProjectCard({ project }: { project: Project }) {
 
       {/* Body */}
       <div className="flex flex-1 flex-col p-6">
-        <h3 className="font-display text-lg font-semibold">
+        <h3 className="font-display text-xl font-semibold">
           {primaryHref ? (
             <a
               href={primaryHref}
@@ -127,7 +127,7 @@ function ProjectCard({ project }: { project: Project }) {
             </span>
           )}
         </h3>
-        <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-2 flex-1 text-[15px] leading-relaxed text-muted-foreground">
           {project.description}
         </p>
 
@@ -174,9 +174,9 @@ function ProjectLink({
       href={href}
       target={href.startsWith("http") ? "_blank" : undefined}
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-white/[0.05] hover:text-foreground"
+      className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-white/[0.05] hover:text-foreground"
     >
-      <Icon className="h-3.5 w-3.5" />
+      <Icon className="h-4 w-4" />
       {children}
     </a>
   );

@@ -97,9 +97,7 @@ export function Experience() {
                         ].join(" ")}
                       >
                         {item.tags.map((t) => (
-                          <Badge key={t} className="text-[13px]">
-                            {t}
-                          </Badge>
+                          <Badge key={t}>{t}</Badge>
                         ))}
                       </div>
                     </motion.article>
