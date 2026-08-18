@@ -20,7 +20,7 @@ export function About() {
                   <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-accent/12 text-accent ring-1 ring-accent/25">
                     <fact.icon className="h-5 w-5" />
                   </span>
-                  <span className="text-[15px] font-medium leading-snug text-foreground/90">
+                  <span className="text-base font-medium leading-snug text-foreground/90">
                     {fact.label}
                   </span>
                 </div>
@@ -33,7 +33,7 @@ export function About() {
         <div className="flex flex-col gap-6">
           {about.paragraphs.map((p, i) => (
             <Reveal key={i} delay={0.05 * i}>
-              <p className="text-[15px] leading-relaxed text-muted-foreground [&:first-child]:text-base [&:first-child]:text-foreground/90">
+              <p className="text-base leading-relaxed text-muted-foreground [&:first-child]:text-[17px] [&:first-child]:text-foreground/90">
                 {p}
               </p>
             </Reveal>
@@ -41,11 +41,11 @@ export function About() {
 
           <Reveal delay={0.2}>
             <figure className="mt-4 rounded-2xl border-l-2 border-accent/60 bg-white/[0.02] px-6 py-5">
-              <blockquote className="font-display text-lg font-medium leading-snug text-foreground/90">
+              <blockquote className="font-display text-xl font-medium leading-snug text-foreground/90">
                 &ldquo;Nothing is out of reach for a man who never stops
                 reaching.&rdquo;
               </blockquote>
-              <figcaption className="mt-2 text-sm text-muted-foreground">
+              <figcaption className="mt-2 text-[15px] text-muted-foreground">
                 — {person.firstName}
               </figcaption>
             </figure>
