@@ -7,8 +7,7 @@ import { ArrowUpRight, Mail, Sparkles } from "lucide-react";
 import { AnimatedBackground } from "@/components/animated-background";
 import { Button } from "@/components/ui/button";
 import { heroStats, person } from "@/lib/data";
-
-const ease = [0.22, 1, 0.36, 1] as const;
+import { duration, ease } from "@/lib/motion";
 
 /** Cycles through the roles with a soft crossfade. */
 function RoleRotator() {
@@ -27,7 +26,7 @@ function RoleRotator() {
         initial={{ y: "100%", opacity: 0 }}
         animate={{ y: "0%", opacity: 1 }}
         exit={{ y: "-100%", opacity: 0 }}
-        transition={{ duration: 0.5, ease }}
+        transition={{ duration: 0.65, ease }}
         className="text-accent-gradient font-semibold"
       >
         {person.roles[index]}
@@ -64,9 +63,9 @@ export function Hero() {
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease, delay: 0.05 }}
+            transition={{ duration: duration.base, ease, delay: 0.08 }}
             className="font-display text-[clamp(2.6rem,7vw,5rem)] font-bold leading-[0.98] tracking-tight"
           >
             {person.name.split(" ")[0]}
@@ -77,18 +76,18 @@ export function Hero() {
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease, delay: 0.15 }}
+            transition={{ duration: duration.base, ease, delay: 0.18 }}
             className="mt-5 text-lg font-medium text-foreground/90 sm:text-xl"
           >
             <RoleRotator />
           </motion.p>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease, delay: 0.22 }}
+            transition={{ duration: duration.base, ease, delay: 0.28 }}
             className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
           >
             {person.tagline} My interests span full-stack development,
@@ -97,9 +96,9 @@ export function Hero() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease, delay: 0.3 }}
+            transition={{ duration: duration.base, ease, delay: 0.38 }}
             className="mt-8 flex flex-wrap items-center gap-3"
           >
             <Button size="lg" onClick={() => scrollTo("projects")}>
@@ -120,9 +119,9 @@ export function Hero() {
 
         {/* Portrait */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.94, y: 20 }}
+          initial={{ opacity: 0, scale: 0.96, y: 16 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.9, ease, delay: 0.2 }}
+          transition={{ duration: duration.slow, ease, delay: 0.22 }}
           className="relative mx-auto w-full max-w-sm lg:max-w-md"
         >
           <Portrait />
@@ -131,9 +130,9 @@ export function Hero() {
 
       {/* Stats strip */}
       <motion.div
-        initial={{ opacity: 0, y: 24 }}
+        initial={{ opacity: 0, y: 18 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease, delay: 0.5 }}
+        transition={{ duration: duration.slow, ease, delay: 0.55 }}
         className="container-px absolute inset-x-0 bottom-6 hidden md:block"
       >
         <div className="glass flex items-stretch justify-between gap-2 rounded-2xl px-2 py-2">

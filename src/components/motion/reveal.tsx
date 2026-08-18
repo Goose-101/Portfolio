@@ -2,14 +2,13 @@
 
 import { motion, type Variants } from "framer-motion";
 import type { ReactNode } from "react";
-
-const easing = [0.22, 1, 0.36, 1] as const;
+import { duration, ease } from "@/lib/motion";
 
 /** Fade-and-rise reveal that triggers once when scrolled into view. */
 export function Reveal({
   children,
   delay = 0,
-  y = 24,
+  y = 16,
   className,
   as = "div",
 }: {
@@ -25,8 +24,8 @@ export function Reveal({
       className={className}
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.7, ease: easing, delay }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: duration.base, ease, delay }}
     >
       {children}
     </MotionTag>
@@ -37,16 +36,16 @@ export function Reveal({
 export const containerVariants: Variants = {
   hidden: {},
   show: {
-    transition: { staggerChildren: 0.09, delayChildren: 0.05 },
+    transition: { staggerChildren: 0.075, delayChildren: 0.05 },
   },
 };
 
 export const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 22 },
+  hidden: { opacity: 0, y: 16 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: easing },
+    transition: { duration: 0.85, ease },
   },
 };
 
@@ -63,7 +62,7 @@ export function StaggerGroup({
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, margin: "-60px" }}
+      viewport={{ once: true, margin: "-48px" }}
     >
       {children}
     </motion.div>

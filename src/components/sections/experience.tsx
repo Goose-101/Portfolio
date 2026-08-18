@@ -5,8 +5,7 @@ import { Briefcase } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 import { Badge } from "@/components/ui/badge";
 import { experience } from "@/lib/data";
-
-const ease = [0.22, 1, 0.36, 1] as const;
+import { duration, ease } from "@/lib/motion";
 
 export function Experience() {
   return (
@@ -37,10 +36,10 @@ export function Experience() {
                     ].join(" ")}
                   >
                     <motion.article
-                      initial={{ opacity: 0, y: 30 }}
+                      initial={{ opacity: 0, y: 18 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, margin: "-80px" }}
-                      transition={{ duration: 0.6, ease }}
+                      viewport={{ once: true, margin: "-60px" }}
+                      transition={{ duration: duration.base, ease }}
                       className={[
                         "relative ml-12 rounded-2xl glass glass-hover p-6 md:ml-0",
                         left ? "md:mr-2 md:text-right" : "md:ml-2",

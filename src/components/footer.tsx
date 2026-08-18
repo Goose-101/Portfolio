@@ -22,8 +22,8 @@ export function Footer() {
             onClick={toTop}
             className="flex items-center gap-2.5 font-display text-lg font-semibold"
           >
-            <span className="grid h-9 w-9 place-items-center rounded-lg bg-accent/15 text-accent ring-1 ring-accent/30">
-              <Terminal className="h-4 w-4" />
+            <span className="grid h-11 w-11 place-items-center rounded-xl bg-accent/15 text-accent ring-1 ring-accent/30">
+              <Terminal className="h-5 w-5" />
             </span>
             {person.wordmark}
           </button>

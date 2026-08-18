@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, Terminal, Download } from "lucide-react";
 import { navLinks, person } from "@/lib/data";
+import { duration, ease } from "@/lib/motion";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -139,7 +140,7 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: duration.fast, ease }}
             className="fixed inset-0 top-0 z-40 lg:hidden"
           >
             <div
@@ -150,7 +151,7 @@ export function Navbar() {
               initial={{ opacity: 0, y: -12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.5, ease }}
               className="relative mx-6 mt-24 flex flex-col gap-1 rounded-3xl glass p-4"
             >
               {navLinks.map((link, i) => (
