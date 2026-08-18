@@ -56,23 +56,23 @@ export function Experience() {
                           left ? "md:justify-end" : "",
                         ].join(" ")}
                       >
-                        <span className="text-xs font-medium uppercase tracking-wider text-accent">
+                        <span className="text-[13px] font-medium uppercase tracking-wider text-accent">
                           {item.period}
                         </span>
                       </div>
-                      <h3 className="mt-2 font-display text-xl font-semibold">
+                      <h3 className="mt-2 font-display text-[1.375rem] font-semibold">
                         {item.role}
                       </h3>
-                      <p className="text-sm font-medium text-muted-foreground">
+                      <p className="text-[15px] font-medium text-muted-foreground">
                         {item.org}
                       </p>
-                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                      <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
                         {item.summary}
                       </p>
 
                       <ul
                         className={[
-                          "mt-4 space-y-2 text-sm text-muted-foreground",
+                          "mt-4 space-y-2 text-[15px] leading-relaxed text-muted-foreground",
                           left ? "md:ml-auto" : "",
                         ].join(" ")}
                       >
@@ -84,7 +84,7 @@ export function Experience() {
                               left ? "md:flex-row-reverse md:text-right" : "",
                             ].join(" ")}
                           >
-                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan" />
+                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan" />
                             <span>{pt}</span>
                           </li>
                         ))}
@@ -97,7 +97,9 @@ export function Experience() {
                         ].join(" ")}
                       >
                         {item.tags.map((t) => (
-                          <Badge key={t}>{t}</Badge>
+                          <Badge key={t} className="text-[13px]">
+                            {t}
+                          </Badge>
                         ))}
                       </div>
                     </motion.article>
