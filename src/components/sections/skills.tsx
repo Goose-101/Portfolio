@@ -23,7 +23,7 @@ export function Skills() {
                   <span className="grid h-10 w-10 place-items-center rounded-xl bg-accent/12 text-accent ring-1 ring-accent/25 transition-transform duration-300 group-hover:scale-110">
                     <cat.icon className="h-5 w-5" />
                   </span>
-                  <h3 className="font-display text-base font-semibold">
+                  <h3 className="font-display text-[17px] font-semibold">
                     {cat.title}
                   </h3>
                 </div>
@@ -31,7 +31,7 @@ export function Skills() {
                   {cat.skills.map((s) => (
                     <li
                       key={s}
-                      className="rounded-lg border border-border/60 bg-white/[0.02] px-2.5 py-1 text-xs font-medium text-muted-foreground transition-colors hover:border-cyan/40 hover:text-foreground"
+                      className="rounded-lg border border-border/60 bg-white/[0.02] px-3 py-1.5 text-[13px] font-medium text-muted-foreground transition-colors hover:border-cyan/40 hover:text-foreground"
                     >
                       {s}
                     </li>
