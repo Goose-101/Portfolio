@@ -171,48 +171,34 @@ function Portrait() {
       {/* Glow ring */}
       <div className="absolute -inset-6 rounded-full bg-gradient-to-tr from-accent/30 via-cyan/20 to-transparent blur-2xl" />
 
-      {/* Perpetual float. Runs regardless of the OS reduce-motion setting so
-          the portrait always reads as alive; the two axes use different
-          periods so it wanders instead of tracking a straight diagonal. */}
-      <motion.div
-        animate={{ y: [0, -18, 0], x: [0, 14, 0, -14, 0] }}
-        transition={{
-          y: { duration: 4.5, repeat: Infinity, ease: "easeInOut" },
-          x: { duration: 16, repeat: Infinity, ease: "easeInOut" },
-        }}
-        className="relative"
-      >
-        <div className="relative aspect-square overflow-hidden rounded-full glass p-[1.5px]">
-          <div className="relative h-full w-full overflow-hidden rounded-full bg-gradient-to-br from-[hsl(222,44%,10%)] to-[hsl(224,47%,5%)]">
-            {person.photo ? (
-              <>
-                {/* Portrait photo */}
-                <Image
-                  src={person.photo}
-                  alt={`Portrait of ${person.name}`}
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 28rem, 32rem"
-                  className="object-cover object-top"
-                />
-              </>
-            ) : (
-              <>
-                {/* Decorative gradient wash */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--accent)/0.25),transparent_55%),radial-gradient(circle_at_80%_80%,hsl(var(--cyan)/0.2),transparent_55%)]" />
-                <div className="absolute inset-0 grid-lines opacity-40" />
+      <div className="relative aspect-square overflow-hidden rounded-full glass p-[1.5px]">
+        <div className="relative h-full w-full overflow-hidden rounded-full bg-gradient-to-br from-[hsl(222,44%,10%)] to-[hsl(224,47%,5%)]">
+          {person.photo ? (
+            /* Portrait photo */
+            <Image
+              src={person.photo}
+              alt={`Portrait of ${person.name}`}
+              fill
+              priority
+              sizes="(max-width: 1024px) 28rem, 32rem"
+              className="object-cover object-top"
+            />
+          ) : (
+            <>
+              {/* Decorative gradient wash */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--accent)/0.25),transparent_55%),radial-gradient(circle_at_80%_80%,hsl(var(--cyan)/0.2),transparent_55%)]" />
+              <div className="absolute inset-0 grid-lines opacity-40" />
 
-                {/* Initials monogram */}
-                <div className="absolute inset-0 grid place-items-center">
-                  <span className="font-display text-[7rem] font-bold text-white/[0.06] select-none">
-                    {initials}
-                  </span>
-                </div>
-              </>
-            )}
-          </div>
+              {/* Initials monogram */}
+              <div className="absolute inset-0 grid place-items-center">
+                <span className="font-display text-[7rem] font-bold text-white/[0.06] select-none">
+                  {initials}
+                </span>
+              </div>
+            </>
+          )}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }
