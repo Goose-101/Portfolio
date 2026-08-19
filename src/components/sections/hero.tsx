@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, Mail, Sparkles } from "lucide-react";
 import { AnimatedBackground } from "@/components/animated-background";
 import { Button } from "@/components/ui/button";
@@ -166,63 +166,74 @@ function Portrait() {
     .slice(0, 2)
     .join("");
 
+  // Honour the OS "reduce motion" setting: the CSS override in globals.css
+  // only reaches CSS animations, not Framer's JS-driven ones.
+  const reduceMotion = useReducedMotion();
+
   return (
     <div className="relative">
       {/* Glow ring */}
-      <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-accent/30 via-cyan/20 to-transparent blur-2xl" />
+      <div className="absolute -inset-6 rounded-full bg-gradient-to-tr from-accent/30 via-cyan/20 to-transparent blur-2xl" />
 
-      <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] glass p-[1.5px]">
-        <div className="relative h-full w-full overflow-hidden rounded-[calc(2rem-1.5px)] bg-gradient-to-br from-[hsl(222,44%,10%)] to-[hsl(224,47%,5%)]">
-          {person.photo ? (
-            <>
-              {/* Portrait photo */}
-              <Image
-                src={person.photo}
-                alt={`Portrait of ${person.name}`}
-                fill
-                priority
-                sizes="(max-width: 1024px) 24rem, 28rem"
-                className="object-cover object-top"
-              />
-              {/* Readability gradient behind the name plate */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />
-            </>
-          ) : (
-            <>
-              {/* Decorative gradient wash */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--accent)/0.25),transparent_55%),radial-gradient(circle_at_80%_80%,hsl(var(--cyan)/0.2),transparent_55%)]" />
-              <div className="absolute inset-0 grid-lines opacity-40" />
+      {/* Slow horizontal drift for the whole portrait cluster */}
+      <motion.div
+        animate={reduceMotion ? undefined : { x: [0, 14, 0, -14, 0] }}
+        transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
+        className="relative"
+      >
+        <div className="relative aspect-square overflow-hidden rounded-full glass p-[1.5px]">
+          <div className="relative h-full w-full overflow-hidden rounded-full bg-gradient-to-br from-[hsl(222,44%,10%)] to-[hsl(224,47%,5%)]">
+            {person.photo ? (
+              <>
+                {/* Portrait photo */}
+                <Image
+                  src={person.photo}
+                  alt={`Portrait of ${person.name}`}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 24rem, 28rem"
+                  className="object-cover object-top"
+                />
+                {/* Soft vignette so the round edge reads against the page */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+              </>
+            ) : (
+              <>
+                {/* Decorative gradient wash */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--accent)/0.25),transparent_55%),radial-gradient(circle_at_80%_80%,hsl(var(--cyan)/0.2),transparent_55%)]" />
+                <div className="absolute inset-0 grid-lines opacity-40" />
 
-              {/* Initials monogram */}
-              <div className="absolute inset-0 grid place-items-center">
-                <span className="font-display text-[7rem] font-bold text-white/[0.06] select-none">
-                  {initials}
-                </span>
-              </div>
-            </>
-          )}
-
-          {/* Floating accent chip */}
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute right-4 top-4 flex items-center gap-1.5 rounded-full glass px-3 py-1.5 text-xs font-medium"
-          >
-            <Sparkles className="h-3.5 w-3.5 text-cyan" />
-            Building the future
-          </motion.div>
-
-          {/* Name plate */}
-          <div className="absolute inset-x-3 bottom-3 rounded-2xl glass px-4 py-3">
-            <div className="font-display text-sm font-semibold">
-              {person.name}
-            </div>
-            <div className="text-xs text-muted-foreground">
-              Software Engineer · Founder
-            </div>
+                {/* Initials monogram */}
+                <div className="absolute inset-0 grid place-items-center">
+                  <span className="font-display text-[7rem] font-bold text-white/[0.06] select-none">
+                    {initials}
+                  </span>
+                </div>
+              </>
+            )}
           </div>
         </div>
-      </div>
+
+        {/* Floating accent chip — outside the round clip so it isn't cut off */}
+        <motion.div
+          animate={reduceMotion ? undefined : { y: [0, -10, 0] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute right-0 top-10 flex items-center gap-1.5 rounded-full glass px-3 py-1.5 text-[13px] font-medium"
+        >
+          <Sparkles className="h-3.5 w-3.5 text-cyan" />
+          Building the future
+        </motion.div>
+
+        {/* Name plate — below the circle, overlapping its lower edge */}
+        <div className="relative z-10 mx-auto -mt-7 w-max max-w-full rounded-2xl glass px-5 py-3 text-center">
+          <div className="font-display text-[15px] font-semibold">
+            {person.name}
+          </div>
+          <div className="text-[13px] text-muted-foreground">
+            Software Engineer · Founder
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 }
