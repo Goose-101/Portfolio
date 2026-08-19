@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, Mail, Sparkles } from "lucide-react";
+import { ArrowUpRight, Mail } from "lucide-react";
 import { AnimatedBackground } from "@/components/animated-background";
 import { Button } from "@/components/ui/button";
 import { heroStats, person } from "@/lib/data";
@@ -122,7 +122,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.96, y: 16 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: duration.slow, ease, delay: 0.22 }}
-          className="relative mx-auto w-full max-w-sm lg:max-w-md"
+          className="relative mx-auto w-full max-w-md lg:max-w-lg"
         >
           <Portrait />
         </motion.div>
@@ -191,11 +191,9 @@ function Portrait() {
                   alt={`Portrait of ${person.name}`}
                   fill
                   priority
-                  sizes="(max-width: 1024px) 24rem, 28rem"
+                  sizes="(max-width: 1024px) 28rem, 32rem"
                   className="object-cover object-top"
                 />
-                {/* Soft vignette so the round edge reads against the page */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
               </>
             ) : (
               <>
@@ -211,26 +209,6 @@ function Portrait() {
                 </div>
               </>
             )}
-          </div>
-        </div>
-
-        {/* Floating accent chip — outside the round clip so it isn't cut off */}
-        <motion.div
-          animate={reduceMotion ? undefined : { y: [0, -10, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute right-0 top-10 flex items-center gap-1.5 rounded-full glass px-3 py-1.5 text-[13px] font-medium"
-        >
-          <Sparkles className="h-3.5 w-3.5 text-cyan" />
-          Building the future
-        </motion.div>
-
-        {/* Name plate — below the circle, overlapping its lower edge */}
-        <div className="relative z-10 mx-auto -mt-7 w-max max-w-full rounded-2xl glass px-5 py-3 text-center">
-          <div className="font-display text-[15px] font-semibold">
-            {person.name}
-          </div>
-          <div className="text-[13px] text-muted-foreground">
-            Software Engineer · Founder
           </div>
         </div>
       </motion.div>
