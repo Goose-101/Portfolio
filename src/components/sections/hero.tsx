@@ -175,10 +175,18 @@ function Portrait() {
       {/* Glow ring */}
       <div className="absolute -inset-6 rounded-full bg-gradient-to-tr from-accent/30 via-cyan/20 to-transparent blur-2xl" />
 
-      {/* Slow horizontal drift for the whole portrait cluster */}
+      {/* Slow drift. The two axes run on different periods so the portrait
+          traces a wandering path instead of a straight diagonal. */}
       <motion.div
-        animate={reduceMotion ? undefined : { x: [0, 14, 0, -14, 0] }}
-        transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
+        animate={
+          reduceMotion
+            ? undefined
+            : { x: [0, 14, 0, -14, 0], y: [0, -8, 0, 8, 0] }
+        }
+        transition={{
+          x: { duration: 16, repeat: Infinity, ease: "easeInOut" },
+          y: { duration: 11, repeat: Infinity, ease: "easeInOut" },
+        }}
         className="relative"
       >
         <div className="relative aspect-square overflow-hidden rounded-full glass p-[1.5px]">
