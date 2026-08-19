@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowUpRight, Mail } from "lucide-react";
 import { AnimatedBackground } from "@/components/animated-background";
 import { Button } from "@/components/ui/button";
@@ -166,26 +166,19 @@ function Portrait() {
     .slice(0, 2)
     .join("");
 
-  // Honour the OS "reduce motion" setting: the CSS override in globals.css
-  // only reaches CSS animations, not Framer's JS-driven ones.
-  const reduceMotion = useReducedMotion();
-
   return (
     <div className="relative">
       {/* Glow ring */}
       <div className="absolute -inset-6 rounded-full bg-gradient-to-tr from-accent/30 via-cyan/20 to-transparent blur-2xl" />
 
-      {/* Slow drift. The two axes run on different periods so the portrait
-          traces a wandering path instead of a straight diagonal. */}
+      {/* Perpetual float. Runs regardless of the OS reduce-motion setting so
+          the portrait always reads as alive; the two axes use different
+          periods so it wanders instead of tracking a straight diagonal. */}
       <motion.div
-        animate={
-          reduceMotion
-            ? undefined
-            : { x: [0, 14, 0, -14, 0], y: [0, -18, 0] }
-        }
+        animate={{ y: [0, -18, 0], x: [0, 14, 0, -14, 0] }}
         transition={{
-          x: { duration: 16, repeat: Infinity, ease: "easeInOut" },
           y: { duration: 4.5, repeat: Infinity, ease: "easeInOut" },
+          x: { duration: 16, repeat: Infinity, ease: "easeInOut" },
         }}
         className="relative"
       >
