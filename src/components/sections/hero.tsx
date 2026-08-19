@@ -181,11 +181,11 @@ function Portrait() {
         animate={
           reduceMotion
             ? undefined
-            : { x: [0, 14, 0, -14, 0], y: [0, -8, 0, 8, 0] }
+            : { x: [0, 14, 0, -14, 0], y: [0, -18, 0] }
         }
         transition={{
           x: { duration: 16, repeat: Infinity, ease: "easeInOut" },
-          y: { duration: 11, repeat: Infinity, ease: "easeInOut" },
+          y: { duration: 4.5, repeat: Infinity, ease: "easeInOut" },
         }}
         className="relative"
       >
