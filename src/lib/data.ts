@@ -105,7 +105,12 @@ export const experience: ExperienceItem[] = [
     org: "The Zoku App (Promoted) · Atlanta, GA",
     period: "Aug 2026 — Present",
     summary: "",
-    points: [],
+    points: [
+      "Implemented 5+ new frontend features and optimized existing components for faster rendering and improved user engagement, while engineering an interactive geolocation system that enabled location based app functionality.",
+      "Refactored and modularized legacy code to improve reusability and cut development time for new features.",
+      "Built support infrastructure including FAQs and a ticketing form to create a clear feedback channel for client side bugs.",
+      "Implemented automated scheduling and error handling mechanisms that improved system reliability by 40% and increased user engagement by 30% through consistent, timely event updates.",
+    ],
     tags: [],
   },
   {
