@@ -101,6 +101,14 @@ export interface ExperienceItem {
 
 export const experience: ExperienceItem[] = [
   {
+    role: "Software Engineer Intern",
+    org: "The Zoku App (Promoted) · Atlanta, GA",
+    period: "Aug 2026 — Present",
+    summary: "",
+    points: [],
+    tags: [],
+  },
+  {
     role: "Founder & President — Rising Tech Society",
     org: "Georgia State University Perimeter College",
     period: "Aug 2026 — Present",

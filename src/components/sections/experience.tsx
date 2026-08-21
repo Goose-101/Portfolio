@@ -66,40 +66,48 @@ export function Experience() {
                       <p className="text-[15px] font-medium text-muted-foreground">
                         {item.org}
                       </p>
-                      <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
-                        {item.summary}
-                      </p>
+                      {/* Summary, bullets and tags are each optional so an
+                          entry can be listed with the role alone. */}
+                      {item.summary && (
+                        <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
+                          {item.summary}
+                        </p>
+                      )}
 
-                      <ul
-                        className={[
-                          "mt-4 space-y-2 text-[15px] leading-relaxed text-muted-foreground",
-                          left ? "md:ml-auto" : "",
-                        ].join(" ")}
-                      >
-                        {item.points.map((pt) => (
-                          <li
-                            key={pt}
-                            className={[
-                              "flex gap-2",
-                              left ? "md:flex-row-reverse md:text-right" : "",
-                            ].join(" ")}
-                          >
-                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan" />
-                            <span>{pt}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      {item.points.length > 0 && (
+                        <ul
+                          className={[
+                            "mt-4 space-y-2 text-[15px] leading-relaxed text-muted-foreground",
+                            left ? "md:ml-auto" : "",
+                          ].join(" ")}
+                        >
+                          {item.points.map((pt) => (
+                            <li
+                              key={pt}
+                              className={[
+                                "flex gap-2",
+                                left ? "md:flex-row-reverse md:text-right" : "",
+                              ].join(" ")}
+                            >
+                              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan" />
+                              <span>{pt}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
 
-                      <div
-                        className={[
-                          "mt-4 flex flex-wrap gap-2",
-                          left ? "md:justify-end" : "",
-                        ].join(" ")}
-                      >
-                        {item.tags.map((t) => (
-                          <Badge key={t}>{t}</Badge>
-                        ))}
-                      </div>
+                      {item.tags.length > 0 && (
+                        <div
+                          className={[
+                            "mt-4 flex flex-wrap gap-2",
+                            left ? "md:justify-end" : "",
+                          ].join(" ")}
+                        >
+                          {item.tags.map((t) => (
+                            <Badge key={t}>{t}</Badge>
+                          ))}
+                        </div>
+                      )}
                     </motion.article>
                   </div>
 
