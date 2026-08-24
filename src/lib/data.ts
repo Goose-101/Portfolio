@@ -175,6 +175,7 @@ export const experience: ExperienceItem[] = [
       "Designed and delivered academic support for Precalculus (MATH 1113) alongside faculty.",
     points: [
       "Built weekly academic support plans that drove a 73% rise in top-grade attainment.",
+      "Diagnosed recurring misconception patterns across the cohort and rebuilt each session around them, targeting the algebra and trigonometry gaps that stall Precalculus students rather than repeating the lecture.",
       "Delivered 160+ hours of instruction through office hours, assignment support, and exam reviews.",
     ],
     tags: ["Teaching", "Mathematics", "Mentorship"],
