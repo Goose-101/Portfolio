@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Mail } from "lucide-react";
-import { AnimatedBackground } from "@/components/animated-background";
 import { Button } from "@/components/ui/button";
 import { heroStats, person } from "@/lib/data";
 import { duration, ease } from "@/lib/motion";
@@ -44,8 +43,6 @@ export function Hero() {
       id="home"
       className="relative flex min-h-[100svh] items-center overflow-hidden pt-28 pb-16"
     >
-      <AnimatedBackground />
-
       <div className="container-px grid w-full items-center gap-14 lg:grid-cols-[1.15fr_0.85fr]">
         {/* Copy */}
         <div>

@@ -1,3 +1,4 @@
+import { AnimatedBackground } from "@/components/animated-background";
 import { Navbar } from "@/components/navbar";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { Footer } from "@/components/footer";
@@ -11,6 +12,7 @@ import { Contact } from "@/components/sections/contact";
 export default function HomePage() {
   return (
     <>
+      <AnimatedBackground />
       <ScrollProgress />
       <Navbar />
       <main id="main">

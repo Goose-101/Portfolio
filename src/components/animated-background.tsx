@@ -3,7 +3,12 @@
 import { motion, useReducedMotion } from "framer-motion";
 
 /**
- * Ambient background: soft drifting gradient orbs + a masked grid.
+ * Ambient page background: soft drifting gradient orbs + a masked grid.
+ *
+ * Fixed to the viewport and rendered once at the page root, so every section
+ * sits on the same wash rather than the hero having a tinted ground and the
+ * rest of the page falling back to flat --background.
+ *
  * Purely decorative — kept subtle and disabled under reduced-motion.
  */
 export function AnimatedBackground() {
@@ -25,7 +30,7 @@ export function AnimatedBackground() {
   return (
     <div
       aria-hidden
-      className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
+      className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
     >
       {/* Masked grid */}
       <div className="absolute inset-0 grid-lines opacity-60" />
@@ -44,9 +49,10 @@ export function AnimatedBackground() {
         {...orb({ x: [0, 40, 0], y: [0, -40, 0] })}
       />
 
-      {/* Vignette + top glow */}
+      {/* Top glow. The old bottom fade is gone: it existed to blend the hero
+          into the next section, and pinned to the viewport it would read as a
+          permanent band across the lower third of every screen. */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,hsl(var(--accent)/0.12),transparent)]" />
-      <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-background to-transparent" />
     </div>
   );
 }
