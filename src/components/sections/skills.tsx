@@ -13,6 +13,7 @@ export function Skills() {
           eyebrow="Skills"
           title="The stack I build with."
           description="A broad, T-shaped toolkit spanning product engineering, AI, cloud, and security."
+          align="center"
         />
 
         <StaggerGroup className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

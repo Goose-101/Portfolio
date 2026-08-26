@@ -5,15 +5,18 @@ import { about, person } from "@/lib/data";
 export function About() {
   return (
     <section id="about" className="relative scroll-mt-24 py-24 sm:py-32">
-      <div className="container-px grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-        <div className="lg:sticky lg:top-28 lg:self-start">
-          <SectionHeading
-            eyebrow="About"
-            title="Turning curiosity into impact."
-          />
+      <div className="container-px">
+        <SectionHeading
+          eyebrow="About"
+          title="Turning curiosity into impact."
+          align="center"
+        />
+      </div>
 
+      <div className="container-px mt-16 grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <div className="lg:sticky lg:top-28 lg:self-start">
           {/* Fact list */}
-          <ul className="mt-8 space-y-3">
+          <ul className="space-y-3">
             {about.facts.map((fact, i) => (
               <Reveal key={fact.label} delay={0.05 * i} as="li">
                 <div className="flex items-center gap-3 rounded-2xl glass glass-hover px-4 py-3">

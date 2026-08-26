@@ -20,6 +20,7 @@ export function Projects() {
           eyebrow="Projects"
           title="Selected work & experiments."
           description="A mix of shipped products, research prototypes, and hardware builds — each solving a real problem end to end."
+          align="center"
         />
 
         <StaggerGroup className="mt-16 grid grid-flow-row-dense gap-6 sm:grid-cols-2 lg:grid-cols-3">
