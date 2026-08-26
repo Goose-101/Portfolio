@@ -77,22 +77,26 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f5f8fc" },
-    { media: "(prefers-color-scheme: dark)", color: "#050914" },
-  ],
+  // Matches the dark default. Not media-based: the page no longer follows the
+  // OS setting, so keying browser chrome off it would mismatch the page.
+  // ThemeToggle rewrites this at runtime when the visitor switches.
+  themeColor: "#050914",
   colorScheme: "light dark",
   width: "device-width",
   initialScale: 1,
 };
 
 /**
- * Applies the saved (or system) theme before first paint.
+ * Applies the saved theme before first paint.
+ *
+ * Dark is the deliberate default: a first-time visitor always lands on dark
+ * regardless of their OS setting, and only ever sees light after choosing it
+ * with the toggle. That choice is then remembered.
  *
  * This has to be a blocking inline script: if the class were added by React
  * after hydration, the page would paint in the wrong theme first and flash.
  */
-const themeScript = `(function(){try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.classList.toggle("dark",t==="dark");document.documentElement.style.colorScheme=t}catch(e){document.documentElement.classList.add("dark");document.documentElement.style.colorScheme="dark"}})();`;
+const themeScript = `(function(){try{var t=localStorage.getItem("theme");if(t!=="light"){t="dark"}document.documentElement.classList.toggle("dark",t==="dark");document.documentElement.style.colorScheme=t}catch(e){document.documentElement.classList.add("dark");document.documentElement.style.colorScheme="dark"}})();`;
 
 export default function RootLayout({
   children,

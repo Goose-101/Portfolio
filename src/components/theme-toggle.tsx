@@ -30,6 +30,12 @@ export function ThemeToggle({ className }: { className?: string }) {
     setTheme(next);
     document.documentElement.classList.toggle("dark", next === "dark");
     document.documentElement.style.colorScheme = next;
+
+    // Keep mobile browser chrome in step with the page.
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute("content", next === "dark" ? "#050914" : "#f5f8fc");
+
     try {
       localStorage.setItem("theme", next);
     } catch {
