@@ -184,7 +184,7 @@ export function Contact() {
 }
 
 const inputCls =
-  "w-full rounded-xl border border-input bg-white/[0.02] px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 outline-none transition-colors focus:border-accent/60 focus:bg-white/[0.04]";
+  "w-full rounded-xl border border-input bg-tint/[0.03] px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 outline-none transition-colors focus:border-accent/60 focus:bg-tint/[0.05]";
 
 function Field({
   label,

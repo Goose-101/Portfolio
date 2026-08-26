@@ -38,6 +38,9 @@ const config: Config = {
         cyan: {
           DEFAULT: "hsl(var(--cyan))", // secondary accent
         },
+        // Surface overlay that flips with the theme: white on dark, black on
+        // light. Use for subtle wash layers, e.g. bg-tint/[0.03].
+        tint: "rgb(var(--tint) / <alpha-value>)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -57,7 +60,7 @@ const config: Config = {
       },
       boxShadow: {
         glow: "0 0 60px -15px hsl(var(--accent) / 0.45)",
-        card: "0 8px 40px -12px rgba(0,0,0,0.6)",
+        card: "0 8px 40px -12px hsl(var(--shadow) / var(--shadow-strength))",
       },
       keyframes: {
         "fade-up": {

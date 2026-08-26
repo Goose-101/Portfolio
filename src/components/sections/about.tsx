@@ -43,7 +43,7 @@ export function About() {
           ))}
 
           <Reveal delay={0.2}>
-            <figure className="mt-4 rounded-2xl border-l-2 border-accent/60 bg-white/[0.02] px-6 py-5">
+            <figure className="mt-4 rounded-2xl border-l-2 border-accent/60 bg-tint/[0.03] px-6 py-5">
               <blockquote className="font-display text-xl font-medium leading-snug text-foreground/90">
                 &ldquo;Nothing is out of reach for a man who never stops
                 reaching.&rdquo;

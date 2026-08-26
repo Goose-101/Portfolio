@@ -6,6 +6,7 @@ import { Menu, X, Terminal, Download } from "lucide-react";
 import { navLinks, person } from "@/lib/data";
 import { duration, ease } from "@/lib/motion";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
@@ -98,7 +99,7 @@ export function Navbar() {
                   {active === link.id && (
                     <motion.span
                       layoutId="nav-active"
-                      className="absolute inset-0 -z-10 rounded-full bg-white/[0.06] ring-1 ring-border/60"
+                      className="absolute inset-0 -z-10 rounded-full bg-tint/[0.07] ring-1 ring-border/60"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -110,6 +111,7 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden items-center gap-2 lg:flex">
+            <ThemeToggle />
             <Button size="sm" onClick={() => go("contact")}>
               Let&apos;s talk
             </Button>
@@ -121,15 +123,18 @@ export function Navbar() {
             </Button>
           </div>
 
-          {/* Mobile toggle */}
-          <button
-            className="grid h-10 w-10 place-items-center rounded-full text-foreground lg:hidden"
-            onClick={() => setOpen((v) => !v)}
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-          >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
+          {/* Mobile controls */}
+          <div className="flex items-center gap-1 lg:hidden">
+            <ThemeToggle />
+            <button
+              className="grid h-10 w-10 place-items-center rounded-full text-foreground"
+              onClick={() => setOpen((v) => !v)}
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+            >
+              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -166,7 +171,7 @@ export function Navbar() {
                     className={cn(
                       "flex w-full items-center justify-between rounded-2xl px-5 py-3.5 text-left text-lg font-medium transition-colors",
                       active === link.id
-                        ? "bg-white/[0.06] text-foreground"
+                        ? "bg-tint/[0.07] text-foreground"
                         : "text-muted-foreground hover:text-foreground"
                     )}
                   >

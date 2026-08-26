@@ -53,7 +53,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-border/70 bg-white/[0.03] px-4 py-1.5 text-[13px] font-medium text-muted-foreground"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-border/70 bg-tint/[0.04] px-4 py-1.5 text-[13px] font-medium text-muted-foreground"
           >
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
@@ -139,7 +139,7 @@ export function Hero() {
           {heroStats.map((s) => (
             <div
               key={s.label}
-              className="flex-1 rounded-xl px-4 py-3 text-center transition-colors hover:bg-white/[0.03]"
+              className="flex-1 rounded-xl px-4 py-3 text-center transition-colors hover:bg-tint/[0.04]"
             >
               <div className="font-display text-[1.6rem] font-bold text-foreground">
                 {s.value}

@@ -6,7 +6,40 @@
 /*  Design tokens                                                     */
 /* ------------------------------------------------------------------ */
 @layer base {
+  /* Light theme (default). The .dark block below overrides every token,
+     so any new token must be declared in both places. */
   :root {
+    --background: 210 40% 98%;
+    --foreground: 224 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 47% 11%;
+
+    --muted: 214 30% 93%;
+    --muted-foreground: 215 18% 40%;
+
+    --border: 214 28% 86%;
+    --input: 214 28% 88%;
+    --ring: 212 100% 45%;
+
+    /* Electric blue, darkened for contrast against a light ground */
+    --accent: 212 100% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Cyan secondary accent */
+    --cyan: 187 90% 34%;
+
+    /* Overlay tint for subtle wash layers: black on light. */
+    --tint: 0 0 0;
+
+    --shadow: 215 30% 30%;
+    --shadow-strength: 0.18;
+
+    --radius: 1rem;
+  }
+
+  /* Dark theme */
+  .dark {
     /* Near-black background with a subtle blue undertone */
     --background: 224 47% 4%;
     --foreground: 210 40% 96%;
@@ -21,14 +54,16 @@
     --input: 216 34% 18%;
     --ring: 212 100% 60%;
 
-    /* Electric blue primary accent */
     --accent: 212 100% 58%;
     --accent-foreground: 224 47% 4%;
 
-    /* Cyan secondary accent */
     --cyan: 187 96% 55%;
 
-    --radius: 1rem;
+    /* White on dark. */
+    --tint: 255 255 255;
+
+    --shadow: 0 0% 0%;
+    --shadow-strength: 0.6;
   }
 
   * {
@@ -144,7 +179,7 @@
 
   /* Section eyebrow label */
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full border border-border/70 bg-white/[0.02] px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground;
+    @apply inline-flex items-center gap-2 rounded-full border border-border/70 bg-tint/[0.03] px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground;
   }
 }
 

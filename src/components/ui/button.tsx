@@ -11,10 +11,10 @@ const buttonVariants = cva(
         primary:
           "bg-accent text-accent-foreground font-semibold shadow-glow hover:shadow-[0_0_70px_-10px_hsl(var(--accent)/0.7)] hover:brightness-110",
         secondary:
-          "glass glass-hover text-foreground hover:text-white",
+          "glass glass-hover text-foreground hover:text-accent",
         outline:
-          "border border-border bg-transparent text-foreground hover:border-accent/60 hover:bg-white/[0.03]",
-        ghost: "text-muted-foreground hover:text-foreground hover:bg-white/[0.04]",
+          "border border-border bg-transparent text-foreground hover:border-accent/60 hover:bg-tint/[0.04]",
+        ghost: "text-muted-foreground hover:text-foreground hover:bg-tint/[0.05]",
       },
       size: {
         default: "h-11 px-6",
