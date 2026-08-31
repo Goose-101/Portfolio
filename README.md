@@ -1,131 +1,96 @@
-# Niguss Solomon Gebru — Portfolio
+# Niguss Solomon Gebru · Portfolio
 
-A premium, dark-themed personal portfolio for **Niguss Solomon Gebru** —
-Software Engineer · AI Researcher · Full Stack Developer · Founder · Cybersecurity Enthusiast · Student Researcher.
+My personal portfolio site: a single page built with Next.js that shows who I am,
+where I have worked, what I have built, and how to reach me.
 
-Built with a focus on polished motion, strong typography, glassmorphism,
-accessibility, and performance.
+Live at [nigussgebru.com](https://nigussgebru.com)
 
----
+## Run it on your machine
 
-## ✨ Highlights
-
-- **Immersive hero** with rotating roles, animated gradient orbs, masked grid, and a generated portrait frame.
-- **Sticky blur navbar** with scroll-spy (active section tracking) and an animated mobile menu.
-- **Scroll-reveal animations** throughout via Framer Motion (staggered cards, fade-up, parallax orbs).
-- **Sections:** Hero, About, Experience (alternating timeline), Projects (responsive grid), Research, Skills, Achievements, Contact.
-- **Working contact form** with client validation + an API route ready for an email provider.
-- **SEO-complete:** metadata, Open Graph, Twitter cards, JSON-LD structured data, dynamic OG image, sitemap, robots, web manifest.
-- **Accessible:** semantic HTML, keyboard navigation, focus-visible rings, skip link, ARIA labels, and full `prefers-reduced-motion` support.
-- **Single source of truth:** all content lives in [`src/lib/data.ts`](src/lib/data.ts).
-
-## 🧱 Tech Stack
-
-| Layer      | Choice                                  |
-| ---------- | --------------------------------------- |
-| Framework  | Next.js 15 (App Router, Server Components) |
-| UI         | React 19 + TypeScript (strict)          |
-| Styling    | Tailwind CSS 3 + CSS design tokens      |
-| Motion     | Framer Motion 11                        |
-| Icons      | Lucide React                            |
-| Utilities  | clsx · tailwind-merge · class-variance-authority |
-
-## 🚀 Getting Started
+You need [Node.js](https://nodejs.org) 18 or newer.
 
 ```bash
-# 1. Install dependencies
 npm install
-
-# 2. (Optional) configure the public site URL for SEO
-cp .env.example .env.local
-#   → set NEXT_PUBLIC_SITE_URL to your production domain
-
-# 3. Run the dev server
 npm run dev
-#   → http://localhost:3000
-
-# 4. Production build
-npm run build && npm run start
 ```
 
-### Scripts
+Open http://localhost:3000 and you are done.
 
-| Command             | Description                        |
-| ------------------- | ---------------------------------- |
-| `npm run dev`       | Start the dev server               |
-| `npm run build`     | Production build                   |
-| `npm run start`     | Serve the production build         |
-| `npm run lint`      | Lint with ESLint                   |
-| `npm run typecheck` | Type-check with `tsc --noEmit`     |
+## Change the content
 
-## 🗂️ Project Structure
+All the text on the site lives in one file: [`src/lib/data.ts`](src/lib/data.ts).
+Edit it and the page updates. Nothing else needs to be touched.
+
+| What you want to change | Where |
+| --- | --- |
+| Name, roles, email, social links | `person` |
+| The stats under the hero | `heroStats` |
+| The About paragraph | `about` |
+| Jobs and internships | `experience` |
+| Project cards | `projects` |
+| Skill groups | `skillCategories` |
+| Contact options | `contactChannels` |
+
+Two other things you may want:
+
+- **Colors:** the CSS variables at the top of [`src/app/globals.css`](src/app/globals.css)
+- **Résumé:** put a file named `resume.pdf` inside `public/` so the download button works
+
+## How the site is put together
 
 ```
 src/
 ├─ app/
-│  ├─ layout.tsx            # Fonts, metadata, JSON-LD, skip link
-│  ├─ page.tsx              # Composes all sections
-│  ├─ globals.css           # Design tokens + utilities
-│  ├─ opengraph-image.tsx   # Dynamic OG/Twitter image
-│  ├─ sitemap.ts / robots.ts / manifest.ts
-│  └─ api/contact/route.ts  # Contact form endpoint
+│  ├─ page.tsx      the home page, stacks the sections in order
+│  ├─ layout.tsx    fonts, page title, SEO tags
+│  ├─ globals.css   colors and shared styles
+│  └─ api/contact/  where the contact form posts
 ├─ components/
-│  ├─ navbar.tsx            # Sticky nav + scroll-spy + mobile menu
-│  ├─ footer.tsx            # Socials + back-to-top
-│  ├─ scroll-progress.tsx   # Top reading-progress bar
-│  ├─ animated-background.tsx
-│  ├─ section-heading.tsx
-│  ├─ motion/reveal.tsx     # Reveal + stagger primitives
-│  ├─ ui/                   # Button, Card, Badge, Slot
-│  └─ sections/             # hero, about, experience, projects,
-│                           #   research, skills, achievements, contact
+│  ├─ sections/     hero, about, experience, projects, skills, contact
+│  ├─ ui/           small reusable pieces: button, card, badge
+│  ├─ navbar.tsx    top bar with dark mode toggle
+│  └─ footer.tsx
 └─ lib/
-   ├─ data.ts               # ← ALL content lives here
-   └─ utils.ts              # cn() + SITE_URL
+   └─ data.ts       all the content
 ```
 
-## ✏️ Customizing Content
+The page is six sections stacked top to bottom. Each one is its own file in
+`components/sections/`, so if you want to change the projects area you only open
+`projects.tsx`.
 
-Nearly everything is data-driven. Open [`src/lib/data.ts`](src/lib/data.ts) to edit:
+## Built with
 
-- `person` — name, roles, tagline, email, social links, résumé path
-- `experience`, `projects`, `research`, `skillCategories`, `achievements`
-- `navLinks`, `heroStats`, `about`, `contactChannels`
+Next.js 15 · React 19 · TypeScript · Tailwind CSS · Framer Motion for the animations
 
-**Colors / theme:** tweak the CSS variables in
-[`src/app/globals.css`](src/app/globals.css) (`--accent`, `--cyan`, `--background`, `--radius`).
+## Commands
 
-**Résumé:** drop a `resume.pdf` into `public/` so the *Download Résumé* button works.
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Start the local dev server |
+| `npm run build` | Build for production |
+| `npm run start` | Run the production build |
+| `npm run lint` | Check for code problems |
+| `npm run typecheck` | Check the TypeScript types |
 
-**Real photo:** replace the generated `Portrait` block in
-[`src/components/sections/hero.tsx`](src/components/sections/hero.tsx) with a
-`next/image` element.
+## Contact form
 
-## 📬 Enabling the Contact Form
+The form sends to `/api/contact`, which right now checks the message is valid and
+logs it on the server. To get the messages in your inbox, add an email service
+such as [Resend](https://resend.com) at the `TODO` in
+[`src/app/api/contact/route.ts`](src/app/api/contact/route.ts).
 
-The form posts to `POST /api/contact`, which currently validates the payload
-and logs it server-side. To actually deliver messages, wire an email provider
-in [`src/app/api/contact/route.ts`](src/app/api/contact/route.ts) (e.g.
-[Resend](https://resend.com), SendGrid, or Nodemailer) at the marked `TODO`
-and add the provider's API key to your environment.
+## Deploying
 
-## ☁️ Deployment (Vercel)
+Push to GitHub, import the repo at [vercel.com/new](https://vercel.com/new), and set
+one environment variable:
 
-1. Push the repo to GitHub.
-2. Import it at [vercel.com/new](https://vercel.com/new).
-3. Set the env var `NEXT_PUBLIC_SITE_URL` to your production domain.
-4. Deploy — Vercel auto-detects Next.js. No extra config needed.
+```
+NEXT_PUBLIC_SITE_URL=https://your-domain.com
+```
 
-Also deployable to any Node host: `npm run build` then `npm run start`.
+Vercel handles the rest. Any Node host also works with `npm run build` then `npm run start`.
 
-## ♿ Accessibility & Performance
+## License
 
-- Semantic landmarks, `aria-current` on the active nav item, labelled controls.
-- Visible focus rings and a keyboard skip-to-content link.
-- `prefers-reduced-motion` disables animations globally.
-- Fonts optimized via `next/font`; code-split, lazy client components; static prerendering where possible.
-
-## 📄 License
-
-Personal project for Niguss Solomon Gebru. Content and branding © Niguss Solomon Gebru.
-Code is free to reuse as a template.
+The code is free to reuse as a template. The written content, photos, and branding
+belong to Niguss Solomon Gebru.
