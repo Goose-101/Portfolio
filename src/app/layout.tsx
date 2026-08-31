@@ -24,7 +24,7 @@ const mono = JetBrains_Mono({
 });
 
 const description =
-  "Niguss Gebru is a Software Engineer, Full Stack Developer, founder of Fresh Land, and undergraduate researcher at Georgia State University building production platforms, applied research, and AI powered tools.";
+  "Niguss Gebru is a Software Engineer, Full-Stack Developer, founder of Fresh Land, and undergraduate researcher at Georgia State University building production platforms, applied research, and AI-powered tools.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   keywords: [
     "Niguss Gebru",
     "Software Engineer",
-    "Full Stack Developer",
+    "Full-Stack Developer",
     "Founder",
     "Fresh Land",
     "Undergraduate Researcher",
