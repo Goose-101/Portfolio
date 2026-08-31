@@ -3,7 +3,7 @@
 My personal portfolio site: a single page built with Next.js that shows who I am,
 where I have worked, what I have built, and how to reach me.
 
-Live at [nigussgebru.com](https://nigussgebru.com)
+Going live at nigussgebru.com soon. Until then, run it locally with the steps below.
 
 ## Run it on your machine
 
