@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "Fresh Land",
     "Undergraduate Researcher",
     "Georgia State University",
-    "Computer Science",
+    "Honors Computer Science",
     "Next.js",
     "Portfolio",
   ],
