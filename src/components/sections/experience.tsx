@@ -17,7 +17,7 @@ export function Experience() {
         <SectionHeading
           eyebrow="Experience"
           title="A track record of building & leading."
-          description="From founding a tech community to conducting research and shipping products — here's the path so far."
+          description="From founding a tech community to conducting research and shipping products, here's the path so far."
           align="center"
         />
 

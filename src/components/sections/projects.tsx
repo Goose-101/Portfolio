@@ -19,7 +19,7 @@ export function Projects() {
         <SectionHeading
           eyebrow="Projects"
           title="Selected work & experiments."
-          description="A mix of shipped products, research prototypes, and hardware builds — each solving a real problem end to end."
+          description="A mix of shipped products, research prototypes, and hardware builds, each solving a real problem end to end."
           align="center"
         />
 
