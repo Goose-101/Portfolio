@@ -36,7 +36,7 @@ export const person = {
     "CS Honors Student",
   ],
   tagline:
-    "Computer Science Honors student at Georgia State University and founder of Fresh Land — building production full-stack platforms, applied research, and AI-powered tools that solve real problems.",
+    "Computer Science Honors student at Georgia State University and founder of Fresh Land, building production full stack platforms, applied research, and AI powered tools that solve real problems.",
   location: "Snellville, GA · Open to opportunities",
   email: "ngebru5@student.gsu.edu",
   resumeUrl: "/resume.pdf",
@@ -237,7 +237,7 @@ export const projects: Project[] = [
     title: "Fresh Land",
     category: "Founder · Web Platform",
     description:
-      "A production immigrant-onboarding platform: a 762+ verified Georgia resource directory, a community forum, and a guided newcomer pathway — serving 150+ daily users, with a multilingual AI assistant powered by Anthropic & Gemini.",
+      "A production immigrant onboarding platform: a 762+ verified Georgia resource directory, a community forum, and a guided newcomer pathway serving 150+ daily users, with a multilingual AI assistant powered by Anthropic & Gemini.",
     tech: ["Next.js", "TypeScript", "PostgreSQL", "Anthropic", "Gemini"],
     gradient: "from-blue-500 via-indigo-500 to-cyan-400",
     icon: Rocket,
@@ -249,7 +249,7 @@ export const projects: Project[] = [
     title: "Robotic Assistive Arm",
     category: "Robotics · Embedded",
     description:
-      "A 6-DOF robotic feeding assistant built with a Raspberry Pi and Arduino ESP32 (C++) for real-time servo coordination, improving mealtime independence and winning 1st place at the Addis Ababa district competition. I led a 3-member team through design and build, integrating a custom gripper, joint mechanisms, and embedded motion sequencing with safety I/O so the arm could assist users with limited mobility.",
+      "A 6 DOF robotic feeding assistant built with a Raspberry Pi and Arduino ESP32 (C++) for real time servo coordination, improving mealtime independence and winning 1st place at the Addis Ababa district competition. I led a three person team through design and build, integrating a custom gripper, joint mechanisms, and embedded motion sequencing with safety I/O so the arm could assist users with limited mobility.",
     tech: ["Raspberry Pi", "ESP32", "C++", "Servo Control"],
     gradient: "from-indigo-500 via-blue-500 to-teal-400",
     icon: Cpu,
@@ -261,7 +261,7 @@ export const projects: Project[] = [
     title: "IoT Attendance System",
     category: "IoT · Full-Stack",
     description:
-      "In many Ethiopian schools attendance is still recorded by hand — slow and easy to get wrong. I co-engineered an IoT system using Arduino (C++), RFID, and MySQL/Firebase to automate it end to end, cutting input time by 91% and sharply improving accuracy. I presented it to the school's administration, faculty, committee, staff, and parents, making the case for how technology can modernize the way education runs, not just at my school but across Ethiopia's schools.",
+      "In many Ethiopian schools attendance is still recorded by hand, which is slow and easy to get wrong. I helped engineer an IoT system using Arduino (C++), RFID, and MySQL/Firebase to automate it end to end, cutting input time by 91% and sharply improving accuracy. I presented it to the school's administration, faculty, committee, staff, and parents, making the case for how technology can modernize the way education runs, not just at my school but across Ethiopia's schools.",
     tech: ["C++", "Arduino", "RFID", "MySQL", "Firebase"],
     gradient: "from-cyan-400 via-sky-500 to-blue-600",
     icon: Database,
@@ -273,7 +273,7 @@ export const projects: Project[] = [
     title: "NEPS School Website",
     category: "Front-End",
     description:
-      "The full front-end of a school's official website, built in a 4-person team with interactive menus, sliders, and animations — serving 500+ users with Node.js and Firebase APIs.",
+      "The full front end of a school's official website, built in a 4 person team with interactive menus, sliders, and animations, serving 500+ users with Node.js and Firebase APIs.",
     tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Node.js"],
     gradient: "from-sky-500 via-blue-500 to-indigo-500",
     icon: Code2,
@@ -284,7 +284,7 @@ export const projects: Project[] = [
     title: "Developer Portfolio",
     category: "Web · This Site",
     description:
-      "This portfolio — a premium, animated Next.js site focused on motion, accessibility, and performance.",
+      "This portfolio: a premium, animated Next.js site focused on motion, accessibility, and performance.",
     tech: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
     gradient: "from-emerald-400 via-teal-500 to-cyan-500",
     icon: Flag,
