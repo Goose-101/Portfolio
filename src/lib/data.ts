@@ -154,7 +154,7 @@ export const experience: ExperienceItem[] = [
     tags: ["Leadership", "Governance", "Public Speaking"],
   },
   {
-    role: "Student Assistant Lead — Student Life",
+    role: "Lead Student Assistant — Student Life",
     org: "Student Engagement Center · Georgia State University Perimeter College — Clarkston, GA",
     period: "Jul 2026 — Present",
     summary:
