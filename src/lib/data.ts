@@ -168,7 +168,7 @@ export const experience: ExperienceItem[] = [
     tags: ["Leadership", "Event Programming", "Marketing"],
   },
   {
-    role: "Supplemental Instructor",
+    role: "Supplemental Instructor — MATH 1113",
     org: "Georgia State University Perimeter College — Dunwoody, GA",
     period: "May 2026 — Aug 2026",
     summary:
