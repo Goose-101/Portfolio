@@ -146,8 +146,8 @@ export const experience: ExperienceItem[] = [
   },
   {
     role: "RISE in Computing Scholar",
-    org: "Cohort-based program for undergraduate computing students",
-    period: "Fall 2026",
+    org: "RISE in Computing · Atlanta, GA",
+    period: "Sep 2026 — Present",
     summary: "",
     points: [
       "Stood out in a competitive selection to become the only sophomore in the cohort for a program supporting undergraduate students pursuing careers in computing.",
