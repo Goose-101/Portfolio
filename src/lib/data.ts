@@ -4,6 +4,7 @@
  */
 import type { LucideIcon } from "lucide-react";
 import {
+  Award,
   Brain,
   Cloud,
   Code2,
@@ -15,7 +16,9 @@ import {
   GraduationCap,
   Linkedin,
   Mail,
+  Medal,
   Rocket,
+  Users,
   Wrench,
 } from "lucide-react";
 
@@ -206,6 +209,41 @@ export const experience: ExperienceItem[] = [
       "Led project-based sessions building teamwork and technical confidence.",
     ],
     tags: ["Teaching", "Python", "Web Dev"],
+  },
+];
+
+/* ----------------------------------------------------------------- */
+/*  Honors & involvement                                              */
+/* ----------------------------------------------------------------- */
+export interface Honor {
+  title: string;
+  // Optional short label shown above the title, e.g. a term.
+  meta?: string;
+  // Optional one-line detail shown under the title.
+  detail?: string;
+  icon: LucideIcon;
+}
+
+export const honors: Honor[] = [
+  {
+    title: "RISE in Computing Scholar",
+    meta: "Fall 2026",
+    detail: "Workshop series and a mentor",
+    icon: Award,
+  },
+  {
+    title: "MESA Scholar & Peer Tutor",
+    detail: "Panelist for MESA's 20th anniversary",
+    icon: Users,
+  },
+  {
+    title: "Phi Theta Kappa",
+    detail: "Alpha Zeta Mu Chapter",
+    icon: Medal,
+  },
+  {
+    title: "Georgia State University Honors College",
+    icon: GraduationCap,
   },
 ];
 
