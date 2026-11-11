@@ -166,8 +166,9 @@ export const experience: ExperienceItem[] = [
     points: [
       "Engineered Python and SageMath algorithms to construct, verify, and visualize closed-loop Rubik's Snake configurations as three-dimensional box shapes, governed by the counting formula N = 4(x + y + z + xy + yz + zx).",
       "Analyzed the periodicity, closure, and non-self-intersection properties of Rubik's Snake degree sequences, contributing original theoretical insights toward a generalized period-2 construction for arbitrary box dimensions.",
+      "Took the work from theory to hardware: 3D printed our own blocks and assembled a 164-block closed loop as a physical demonstration of the construction.",
     ],
-    tags: ["Research", "Combinatorics", "Python", "SageMath"],
+    tags: ["Research", "Combinatorics", "Python", "SageMath", "3D Printing"],
   },
   {
     role: "Undergraduate Researcher — C.O.R.E.",
