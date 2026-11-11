@@ -150,7 +150,7 @@ export const experience: ExperienceItem[] = [
     period: "Fall 2026",
     summary: "",
     points: [
-      "Selected for a competitive cohort-based program supporting undergraduate students pursuing careers in computing.",
+      "Stood out in a competitive selection to become the only sophomore in the cohort for a program supporting undergraduate students pursuing careers in computing.",
       "Participated in mentorship, technical workshops, and professional development sessions focused on career readiness in technology.",
       "Collaborated with peers and industry professionals through networking events, panels, and community-building activities.",
       "Developed leadership and professional skills while exploring opportunities in software development, research, and emerging technologies.",
