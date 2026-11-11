@@ -113,6 +113,7 @@ export const experience: ExperienceItem[] = [
       "Earned the Concepts + Fundamentals badge and the Advanced badge on the IBM Z Xplore platform.",
       "Featured by the IBM Z Student Ambassador Program on LinkedIn after connecting with the program in person.",
       "Bringing IBM Z to HACKPERIMETER '26 as a sponsor.",
+      "Bringing IBM Z Xplore badges to Rising Tech Society members, so first and second year students can work through the Concepts + Fundamentals badge together and solve problems as a team. Each session ends with students sharing what they learned, which builds their communication and leadership skills.",
     ],
     tags: ["IBM Z", "Mainframe", "Outreach"],
   },
