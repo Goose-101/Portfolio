@@ -104,6 +104,19 @@ export interface ExperienceItem {
 
 export const experience: ExperienceItem[] = [
   {
+    role: "IBM Z Student Ambassador",
+    org: "Georgia State University",
+    period: "Sep 2026 — Present",
+    summary:
+      "Selected as Georgia State's IBM Z Student Ambassador, promoting mainframe careers and IBM Z skills to students.",
+    points: [
+      "Earned the Concepts + Fundamentals badge and the Advanced badge on the IBM Z Xplore platform.",
+      "Featured by the IBM Z Student Ambassador Program on LinkedIn after connecting with the program in person.",
+      "Bringing IBM Z to HACKPERIMETER '26 as a sponsor.",
+    ],
+    tags: ["IBM Z", "Mainframe", "Outreach"],
+  },
+  {
     role: "Software Engineer Intern",
     org: "The Zoku App (Promoted) · Atlanta, GA",
     period: "Aug 2026 — Present",
