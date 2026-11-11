@@ -120,9 +120,10 @@ export const experience: ExperienceItem[] = [
     summary:
       "A student-led programming organization serving Computer Science and STEM students across all five Perimeter College campuses.",
     points: [
-      "Founded and lead an organization that turns coursework into industry readiness, running hackathons, monthly coding challenges, and hands-on Arduino and hardware competitions that give members portfolio-ready projects.",
-      "Connect students directly to opportunity through alumni and transfer-student networking, industry speaker events, and a Career Services partnership delivering resume workshops, mock interviews, and internship prep.",
-      "Push back on the discouraging rumors students hear about the computer science job market, turning that doubt back into curiosity and sending members into the real world prepared and confident rather than anxious.",
+      "Founded Rising Tech Society and grew it to 300+ members across all five Perimeter College campuses in under a month. The kickoff event drew 215+ students.",
+      "Organized the Faculty Research Showcase, where 6 faculty members presented to 75+ STEM students. We matched students to research, internship, and funded opportunities by their major and eligibility, including MESA, NeuroAI, SRC, HHMI, SoTL, REU, CURCI, CASA, DOE, CCIC, NASA internships, and NSF funded research programs that most STEM students never hear about.",
+      "Built a path into research for students who face eligibility limits, including international students and students with specific visa requirements, by pairing each with a personal faculty mentor for independent research.",
+      "Connect students with alumni, transfer students, industry speakers, and Career Services for resume workshops, mock interviews, and internship preparation.",
     ],
     tags: ["Founder", "Leadership", "Community", "Career Development"],
   },
