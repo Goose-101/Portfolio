@@ -158,6 +158,18 @@ export const experience: ExperienceItem[] = [
     tags: ["Mentorship", "Professional Development", "Networking"],
   },
   {
+    role: "Undergraduate Researcher — Rubik's Snake Box Shapes",
+    org: "Georgia State University Perimeter College · Dr. Su — Clarkston, GA",
+    period: "May 2026 — Present",
+    summary:
+      "Building a computational and theoretical framework for Rubik's Snake box shapes: closed-loop configurations that fold into three-dimensional boxes.",
+    points: [
+      "Engineered Python and SageMath algorithms to construct, verify, and visualize closed-loop Rubik's Snake configurations as three-dimensional box shapes, governed by the counting formula N = 4(x + y + z + xy + yz + zx).",
+      "Analyzed the periodicity, closure, and non-self-intersection properties of Rubik's Snake degree sequences, contributing original theoretical insights toward a generalized period-2 construction for arbitrary box dimensions.",
+    ],
+    tags: ["Research", "Combinatorics", "Python", "SageMath"],
+  },
+  {
     role: "Undergraduate Researcher — C.O.R.E.",
     org: "Georgia State University Perimeter College · Dr. Andrew Kim — Remote/Dunwoody, GA",
     period: "May 2026 — Present",
